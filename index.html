@@ -134,21 +134,28 @@ header{
     url("assets/hero.jpg") right center/cover no-repeat;
 }
 @media(max-width:920px){
-  .hero{background:
-    linear-gradient(rgba(244,240,233,.93), rgba(244,240,233,.9)),
-    url("assets/hero.jpg") center/cover no-repeat;}
+  .hero{
+    background:
+      linear-gradient(rgba(244,240,233,.93), rgba(244,240,233,.9)),
+      url("assets/hero.jpg") center/cover no-repeat;
+    min-height:auto;
+    justify-content:flex-start;
+    padding-top:118px;
+  }
+  .hero .hero-rodape{position:static;margin-top:3.4rem;border-top:1px solid var(--linha)}
+  .hero .hero-rodape .wrap{flex-direction:column;gap:.55rem;align-items:center;text-align:center}
 }
 .veios{position:absolute;inset:0;pointer-events:none}
 .veios path{fill:none;stroke:var(--bronze);stroke-width:1;opacity:.28}
 .hero-inner{position:relative;z-index:2}
 .hero .label{display:block;margin-bottom:2rem}
 .hero h1{
-  font-size:clamp(3rem,8.5vw,7.2rem);
+  font-size:clamp(2.7rem,7vw,6.4rem);
   max-width:13ch;
 }
 .hero h1 .esc{
   font-style:italic;font-weight:300;color:var(--azul);
-  position:relative;white-space:nowrap;
+  position:relative;
 }
 .hero h1 .esc::after{
   content:"";position:absolute;left:2%;bottom:.06em;width:96%;height:1px;background:var(--bronze);opacity:.5;
@@ -253,6 +260,10 @@ header{
 .passo .n{font-family:var(--serif);font-style:italic;font-size:2.2rem;color:var(--bronze)}
 .passo h3{font-size:1.12rem;margin:.8rem 0 .5rem;font-family:var(--sans);font-weight:600}
 .passo p{font-size:.88rem;color:#4A453C}
+@media(max-width:1200px){.passos{grid-template-columns:1fr 1fr}}
+@media(max-width:1100px){
+  .num-fantasma{font-size:clamp(4.5rem,9vw,7rem);top:1.5rem}
+}
 
 /* ---------- projetos (instagram) ---------- */
 .projetos{background:var(--areia);padding:8rem 0}
@@ -267,6 +278,7 @@ header{
   color:var(--bronze);padding:.7rem .6rem .5rem;
 }
 .cartao-ig blockquote.instagram-media{min-height:430px;margin:0 auto !important;max-width:100% !important;min-width:0 !important;border:none !important;box-shadow:none !important}
+@media(max-width:1100px){.grade-ig{grid-template-columns:repeat(2,1fr)}}
 
 /* ---------- região / marquee ---------- */
 .regiao{padding:6.5rem 0 0}
@@ -319,6 +331,7 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
 /* ---------- responsivo ---------- */
 @media(max-width:920px){
   .nav-links{display:none}
+  .num-fantasma{display:none}
   .pilares{grid-template-columns:1fr}
   .pilar+.pilar{border-left:none;border-top:1px solid var(--linha);padding-left:0;padding-top:2rem;margin-top:2rem}
   .aplic-linha{grid-template-columns:2.4rem 1fr auto;gap:1rem}
