@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oliveira Porcelanatos — Porcelanato Esculpido de Alto Padrão | Joinville e Litoral Norte de SC</title>
+<title>Oliveira Porcelanatos | Porcelanato Esculpido de Alto Padrão em Joinville e Litoral Norte de SC</title>
 <meta name="description" content="Cortes especiais e porcelanato esculpido para cozinhas, lavabos, escadas, painéis e lareiras. Projetos sob medida em Joinville, Balneário Camboriú, Itapema, Barra Velha e região. Orçamento direto pelo WhatsApp.">
 <link rel="icon" type="image/jpeg" href="assets/logo-ig.jpg">
 <link rel="canonical" href="https://oliveiraporcelanatos.com.br/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Oliveira Porcelanatos — A arte de esculpir porcelanato">
+<meta property="og:title" content="Oliveira Porcelanatos | A arte de esculpir porcelanato">
 <meta property="og:description" content="Acabamento de alto padrão em porcelanato, quartzo e mármore. Cozinhas, lavabos, escadas e painéis sob medida em Joinville e litoral norte de SC.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://oliveiraporcelanatos.com.br/">
-<meta property="og:image" content="https://oliveiraporcelanatos.com.br/assets/logo-ig.jpg">
+<meta property="og:image" content="https://oliveiraporcelanatos.com.br/assets/hero.jpg">
 <meta property="og:locale" content="pt_BR">
 
 <!-- JSON-LD: negócio local -->
@@ -36,7 +36,7 @@
 </script>
 
 <!--
-  META PIXEL — inserir quando a conta de anúncios estiver criada.
+  META PIXEL: inserir quando a conta de anúncios estiver criada.
   Substituir SEU_PIXEL_ID e descomentar:
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -61,6 +61,9 @@ fbq('track', 'PageView');
   --grafite-2:#23211C;
   --bronze:#8F7256;
   --bronze-claro:#C2A789;
+  --azul:#4A68AE;        /* azul do logo Oliveira */
+  --azul-escuro:#3A5390;
+  --azul-claro:#93A7D4;
   --linha:rgba(24,23,20,.16);
   --linha-clara:rgba(244,240,233,.22);
   --serif:'Fraunces',Georgia,serif;
@@ -87,7 +90,7 @@ body::after{
 .wrap{max-width:1200px;margin:0 auto;padding:0 6vw}
 .label{
   font-family:var(--sans);font-size:.72rem;font-weight:600;
-  letter-spacing:.22em;text-transform:uppercase;color:var(--bronze);
+  letter-spacing:.22em;text-transform:uppercase;color:var(--azul);
 }
 h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.01em}
 em{font-style:italic;font-weight:300}
@@ -100,15 +103,15 @@ header{
   border-bottom:1px solid var(--linha);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-.marca{font-family:var(--serif);font-size:1.25rem;letter-spacing:.02em;text-decoration:none;color:var(--grafite)}
-.marca span{color:var(--bronze);font-style:italic}
+.marca{font-family:var(--serif);font-size:1.25rem;letter-spacing:.02em;text-decoration:none;color:var(--azul)}
+.marca span{color:var(--grafite);font-style:italic}
 .nav-links{display:flex;gap:2.2rem;list-style:none}
 .nav-links a{
   text-decoration:none;color:var(--grafite);font-size:.82rem;font-weight:500;
   letter-spacing:.08em;text-transform:uppercase;position:relative;
 }
 .nav-links a::after{
-  content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--bronze);transition:width .35s;
+  content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--azul);transition:width .35s;
 }
 .nav-links a:hover::after{width:100%}
 .btn-zap{
@@ -125,6 +128,15 @@ header{
 .hero{
   min-height:100svh;display:flex;flex-direction:column;justify-content:center;
   position:relative;padding-top:72px;overflow:hidden;
+  background:
+    linear-gradient(100deg, var(--porcelana) 0%, var(--porcelana) 34%,
+      rgba(244,240,233,.88) 52%, rgba(244,240,233,.55) 74%, rgba(244,240,233,.32) 100%),
+    url("assets/hero.jpg") right center/cover no-repeat;
+}
+@media(max-width:920px){
+  .hero{background:
+    linear-gradient(rgba(244,240,233,.93), rgba(244,240,233,.9)),
+    url("assets/hero.jpg") center/cover no-repeat;}
 }
 .veios{position:absolute;inset:0;pointer-events:none}
 .veios path{fill:none;stroke:var(--bronze);stroke-width:1;opacity:.28}
@@ -135,7 +147,7 @@ header{
   max-width:13ch;
 }
 .hero h1 .esc{
-  font-style:italic;font-weight:300;color:var(--bronze);
+  font-style:italic;font-weight:300;color:var(--azul);
   position:relative;white-space:nowrap;
 }
 .hero h1 .esc::after{
@@ -163,6 +175,18 @@ header{
 
 /* ---------- faixa manifesto ---------- */
 .manifesto{padding:9rem 0 7rem;position:relative}
+.manifesto-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:4rem;align-items:start}
+.foto-quadro{position:relative;margin-top:1rem}
+.foto-quadro img{width:100%;display:block;border:1px solid var(--linha)}
+.foto-quadro::after{
+  content:"";position:absolute;top:14px;left:14px;width:100%;height:100%;
+  border:1px solid var(--azul);opacity:.35;z-index:-1;
+}
+.foto-quadro figcaption{
+  margin-top:.9rem;font-size:.72rem;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--bronze);
+}
+@media(max-width:920px){.manifesto-grid{grid-template-columns:1fr}}
 .num-fantasma{
   position:absolute;top:2.5rem;right:4vw;font-family:var(--serif);
   font-size:clamp(6rem,14vw,11rem);line-height:1;color:transparent;
@@ -181,7 +205,7 @@ header{
 
 /* ---------- aplicações ---------- */
 .aplicacoes{background:var(--grafite);color:var(--porcelana);padding:8rem 0;position:relative}
-.aplicacoes .label{color:var(--bronze-claro)}
+.aplicacoes .label{color:var(--azul-claro)}
 .aplicacoes h2{font-size:clamp(1.9rem,4vw,3.2rem);margin:1.4rem 0 0;max-width:20ch}
 .aplicacoes .intro{margin-top:1.6rem;max-width:52ch;color:#B7B0A4;font-size:.98rem}
 .lista-aplic{margin-top:4.5rem;border-top:1px solid var(--linha-clara);list-style:none}
@@ -201,7 +225,7 @@ header{
 }
 .materiais .label{color:#7E776B}
 .materiais span{font-family:var(--serif);font-size:1.15rem;color:var(--porcelana)}
-.materiais span i{color:var(--bronze-claro);font-style:normal;margin-right:.6rem}
+.materiais span i{color:var(--azul-claro);font-style:normal;margin-right:.6rem}
 
 /* ---------- processo ---------- */
 .processo{padding:8.5rem 0;position:relative}
@@ -247,7 +271,12 @@ header{
 @keyframes rolar{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ---------- cta final ---------- */
-.cta-final{background:var(--grafite);color:var(--porcelana);padding:9rem 0;text-align:center;position:relative;overflow:hidden}
+.cta-final{
+  color:var(--porcelana);padding:9rem 0;text-align:center;position:relative;overflow:hidden;
+  background:
+    linear-gradient(rgba(24,23,20,.93), rgba(24,23,20,.96)),
+    url("assets/ambiente-claro.jpg") center 30%/cover no-repeat;
+}
 .cta-final .veios path{stroke:var(--bronze-claro)}
 .cta-final h2{font-size:clamp(2.2rem,5.5vw,4.4rem);max-width:18ch;margin:1.6rem auto 0;position:relative;z-index:2}
 .cta-final p{margin:1.8rem auto 0;max-width:44ch;color:#B7B0A4;position:relative;z-index:2}
@@ -314,13 +343,13 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
     <path d="M900,-50 C860,180 990,320 940,520 S840,780 900,950" opacity=".35"/>
   </svg>
   <div class="wrap hero-inner">
-    <span class="label reveal" style="--d:.05s">Acabamento de alto padrão — Joinville · Litoral Norte de SC</span>
+    <span class="label reveal" style="--d:.05s">Acabamento de alto padrão · Joinville e litoral norte de SC</span>
     <h1>
       <span class="reveal" style="--d:.15s;display:block">A arte de</span>
       <span class="reveal" style="--d:.3s;display:block">esculpir <span class="esc">porcelanato</span>.</span>
     </h1>
     <p class="hero-sub reveal" style="--d:.45s">
-      Cozinhas, lavabos, escadas e painéis sob medida — cortes de precisão em
+      Cozinhas, lavabos, escadas e painéis sob medida, com cortes de precisão em
       porcelanato, quartzo e mármore para projetos que pedem requinte.
     </p>
     <div class="hero-ctas reveal" style="--d:.6s">
@@ -334,7 +363,7 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
   <div class="hero-rodape">
     <div class="wrap">
       <span>Porcelanato · Quartzo · Mármore</span>
-      <span>Projeto — Corte — Instalação</span>
+      <span>Projeto · Corte · Instalação</span>
       <span>@oliveiraporcelanatos</span>
     </div>
   </div>
@@ -343,13 +372,21 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
 <section class="manifesto">
   <span class="num-fantasma" aria-hidden="true">01</span>
   <div class="wrap">
-    <span class="label reveal">O ateliê</span>
-    <h2 class="reveal">Cada chapa tem um veio único. Cada projeto recebe uma <em>assinatura</em>.</h2>
+    <div class="manifesto-grid">
+      <div>
+        <span class="label reveal">O ateliê</span>
+        <h2 class="reveal">Cada chapa tem um veio único. Cada projeto recebe uma <em>assinatura</em>.</h2>
+      </div>
+      <figure class="foto-quadro reveal">
+        <img src="assets/detalhe-pia.jpg" alt="Pia esculpida em peça única pela Oliveira Porcelanatos" loading="lazy">
+        <figcaption>Pia esculpida em peça única · trabalho Oliveira</figcaption>
+      </figure>
+    </div>
     <div class="pilares">
       <div class="pilar reveal">
         <span class="idx">i.</span>
         <h3>Corte de precisão</h3>
-        <p>Cortes especiais e esculpidos que transformam a chapa em peça única — encaixes exatos, veios contínuos, acabamento de joalheria.</p>
+        <p>Cortes especiais e esculpidos que transformam a chapa em peça única: encaixes exatos, veios contínuos e acabamento de joalheria.</p>
       </div>
       <div class="pilar reveal">
         <span class="idx">ii.</span>
@@ -367,22 +404,22 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
 
 <section class="aplicacoes" id="aplicacoes">
   <div class="wrap">
-    <span class="label reveal">02 — Aplicações</span>
+    <span class="label reveal">02 · Aplicações</span>
     <h2 class="reveal">Onde o porcelanato vira <em>obra</em></h2>
     <p class="intro reveal">Do projeto à instalação, criamos peças esculpidas para os ambientes mais nobres da casa.</p>
     <ul class="lista-aplic">
-      <li class="reveal"><div class="aplic-linha"><span class="n">i.</span><h3>Cozinhas</h3><p>Bancadas, ilhas e frentes esculpidas — o coração da casa em pedra contínua.</p><span class="seta">→</span></div></li>
+      <li class="reveal"><div class="aplic-linha"><span class="n">i.</span><h3>Cozinhas</h3><p>Bancadas, ilhas e frentes esculpidas. O coração da casa em pedra contínua.</p><span class="seta">→</span></div></li>
       <li class="reveal"><div class="aplic-linha"><span class="n">ii.</span><h3>Lavabos</h3><p>Cubas e bancadas esculpidas em peça única, do mármore ônix ao porcelanato.</p><span class="seta">→</span></div></li>
       <li class="reveal"><div class="aplic-linha"><span class="n">iii.</span><h3>Pias &amp; bancadas esculpidas</h3><p>A especialidade da casa: a cuba nasce da própria chapa, sem emendas aparentes.</p><span class="seta">→</span></div></li>
       <li class="reveal"><div class="aplic-linha"><span class="n">iv.</span><h3>Painéis &amp; nichos</h3><p>Paredes e nichos que emolduram o ambiente com veio contínuo.</p><span class="seta">→</span></div></li>
       <li class="reveal"><div class="aplic-linha"><span class="n">v.</span><h3>Escadas</h3><p>Degraus revestidos com precisão milimétrica e caimento perfeito.</p><span class="seta">→</span></div></li>
-      <li class="reveal"><div class="aplic-linha"><span class="n">vi.</span><h3>Lareiras &amp; áreas gourmet</h3><p>Convívio com requinte — churrasqueiras, lareiras e espaços para receber.</p><span class="seta">→</span></div></li>
+      <li class="reveal"><div class="aplic-linha"><span class="n">vi.</span><h3>Lareiras &amp; áreas gourmet</h3><p>Convívio com requinte: churrasqueiras, lareiras e espaços para receber.</p><span class="seta">→</span></div></li>
     </ul>
     <div class="materiais reveal">
       <span class="label">Materiais</span>
-      <span><i>—</i>Porcelanato</span>
-      <span><i>—</i>Quartzo</span>
-      <span><i>—</i>Mármore &amp; Ônix</span>
+      <span><i>·</i>Porcelanato</span>
+      <span><i>·</i>Quartzo</span>
+      <span><i>·</i>Mármore &amp; Ônix</span>
     </div>
   </div>
 </section>
@@ -406,7 +443,7 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
       <div class="passo reveal">
         <span class="n">03</span>
         <h3>Corte &amp; escultura</h3>
-        <p>A chapa é cortada e esculpida com precisão — peça única, feita para o seu espaço.</p>
+        <p>A chapa é cortada e esculpida com precisão. Peça única, feita para o seu espaço.</p>
       </div>
       <div class="passo reveal">
         <span class="n">04</span>
@@ -421,7 +458,7 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
   <div class="wrap">
     <div class="projetos-cab">
       <div>
-        <span class="label reveal">04 — Projetos recentes</span>
+        <span class="label reveal">04 · Projetos recentes</span>
         <h2 class="reveal">Trabalho <em>real</em>, direto do ateliê</h2>
       </div>
       <a class="btn-fantasma reveal" href="https://www.instagram.com/oliveiraporcelanatos/" target="_blank" rel="noopener">Seguir @oliveiraporcelanatos</a>
@@ -440,7 +477,7 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C1FrgEyv8BU/" data-instgrm-version="14"></blockquote>
       </figure>
       <figure class="cartao-ig reveal">
-        <figcaption>Lavabo — mármore ônix</figcaption>
+        <figcaption>Lavabo em mármore ônix</figcaption>
         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DALcumXuPbm/" data-instgrm-version="14"></blockquote>
       </figure>
       <figure class="cartao-ig reveal">
@@ -459,7 +496,7 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
   <div class="regiao-txt">
     <span class="label reveal">Onde atendemos</span>
     <h2 class="reveal">De Joinville ao litoral norte catarinense</h2>
-    <p class="reveal">Atendemos projetos residenciais e comerciais em Joinville e região — incluindo as casas e apartamentos de alto padrão de Balneário Camboriú, Itapema e Barra Velha.</p>
+    <p class="reveal">Atendemos projetos residenciais e comerciais em Joinville e região, incluindo as casas e apartamentos de alto padrão de Balneário Camboriú, Itapema e Barra Velha.</p>
   </div>
   <div class="marquee" aria-hidden="true">
     <div class="marquee-faixa">
@@ -477,12 +514,12 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
   <div class="wrap">
     <span class="label reveal" style="color:var(--bronze-claro)">Orçamento</span>
     <h2 class="reveal">Seu projeto merece esse <em>acabamento</em>.</h2>
-    <p class="reveal">Atendimento consultivo, direto com quem projeta e executa. Conte o que você imagina — nós esculpimos.</p>
+    <p class="reveal">Atendimento consultivo, direto com quem projeta e executa. Conte o que você imagina, que nós esculpimos.</p>
     <a class="btn-zap grande reveal" href="https://wa.me/5547991154111?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Oliveira%20Porcelanatos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.6 5.6.6 11.9c0 2 .5 4 1.5 5.7L.5 23.5l6-1.6c1.7.9 3.5 1.4 5.5 1.4 6.3 0 11.4-5.1 11.4-11.4S18.3.5 12 .5zm0 20.8c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.6 1 1-3.5-.2-.4c-1-1.5-1.5-3.2-1.5-5 0-5.2 4.2-9.4 9.4-9.4s9.4 4.2 9.4 9.4-4.2 9.4-9.4 9.4zm5.2-7c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
       Chamar no WhatsApp
     </a>
-    <span class="fone">(47) 99115-4111 — Bruno &amp; Patricia</span>
+    <span class="fone">(47) 99115-4111 · Bruno e Patricia</span>
   </div>
 </section>
 
@@ -494,7 +531,7 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
       <a href="https://www.facebook.com/profile.php?id=100063619958677" target="_blank" rel="noopener">Facebook</a>
       <a href="https://wa.me/5547991154111" target="_blank" rel="noopener">WhatsApp</a>
     </nav>
-    <small>© 2026 Oliveira Porcelanatos — Joinville · SC</small>
+    <small>© 2026 Oliveira Porcelanatos · Joinville, SC</small>
   </div>
 </footer>
 
