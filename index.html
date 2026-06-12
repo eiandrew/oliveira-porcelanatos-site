@@ -129,15 +129,15 @@ header{
   min-height:100svh;display:flex;flex-direction:column;justify-content:center;
   position:relative;padding-top:72px;overflow:hidden;
   background:
-    linear-gradient(100deg, var(--porcelana) 0%, var(--porcelana) 34%,
-      rgba(244,240,233,.88) 52%, rgba(244,240,233,.55) 74%, rgba(244,240,233,.32) 100%),
-    url("assets/hero.jpg") right center/cover no-repeat;
+    linear-gradient(100deg, rgba(24,23,20,.95) 0%, rgba(24,23,20,.84) 38%,
+      rgba(24,23,20,.55) 66%, rgba(24,23,20,.3) 100%),
+    url("assets/hero.jpg") center 26%/cover no-repeat;
 }
 @media(max-width:920px){
   .hero{
     background:
-      linear-gradient(rgba(244,240,233,.93), rgba(244,240,233,.9)),
-      url("assets/hero.jpg") center/cover no-repeat;
+      linear-gradient(rgba(24,23,20,.88), rgba(24,23,20,.93)),
+      url("assets/hero.jpg") center 30%/cover no-repeat;
     min-height:auto;
     justify-content:flex-start;
     padding-top:118px;
@@ -179,6 +179,20 @@ header{
   padding-top:1.1rem;padding-bottom:1.1rem;gap:1rem;flex-wrap:wrap;
 }
 .hero-rodape span{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:#6B6457}
+
+/* ---------- hero escuro: texto claro sobre a foto ---------- */
+.hero h1{color:var(--porcelana)}
+.hero h1 .esc{color:var(--azul-claro)}
+.hero h1 .esc::after{background:var(--bronze-claro)}
+.hero .label{color:var(--azul-claro)}
+.hero .hero-sub{color:#CFC8BA}
+.hero .btn-zap{background:var(--porcelana);color:var(--grafite);border-color:var(--porcelana)}
+.hero .btn-zap:hover{background:transparent;color:var(--porcelana)}
+.hero .btn-fantasma{color:var(--porcelana);border-color:var(--porcelana)}
+.hero .btn-fantasma:hover{color:var(--bronze-claro);border-color:var(--bronze-claro)}
+.hero .hero-rodape{border-top:1px solid var(--linha-clara)}
+.hero .hero-rodape span{color:#9C958A}
+.hero .veios path{stroke:var(--bronze-claro);opacity:.32}
 
 /* ---------- faixa manifesto ---------- */
 .manifesto{padding:9rem 0 7rem;position:relative}
