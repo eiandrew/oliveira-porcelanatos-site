@@ -208,7 +208,22 @@ header{
 .aplicacoes .label{color:var(--azul-claro)}
 .aplicacoes h2{font-size:clamp(1.9rem,4vw,3.2rem);margin:1.4rem 0 0;max-width:20ch}
 .aplicacoes .intro{margin-top:1.6rem;max-width:52ch;color:#B7B0A4;font-size:.98rem}
-.lista-aplic{margin-top:4.5rem;border-top:1px solid var(--linha-clara);list-style:none}
+.aplic-wrap{display:grid;grid-template-columns:1.45fr 1fr;gap:3.5rem;align-items:start;margin-top:4.5rem}
+.lista-aplic{border-top:1px solid var(--linha-clara);list-style:none}
+.aplic-preview{position:sticky;top:104px;margin:0}
+.aplic-moldura{position:relative;aspect-ratio:4/5;overflow:hidden;border:1px solid var(--linha-clara);background:var(--grafite-2)}
+.aplic-moldura img{width:100%;height:100%;object-fit:cover;display:block;opacity:1;transition:opacity .28s ease}
+.aplic-preview figcaption{
+  margin-top:.85rem;font-size:.72rem;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--azul-claro);
+}
+.aplic-foto-m{display:none}
+@media(max-width:920px){
+  .aplic-wrap{grid-template-columns:1fr;gap:0}
+  .aplic-preview{display:none}
+  .lista-aplic li.aberta .aplic-foto-m{display:block;padding:0 0 1.8rem}
+  .aplic-foto-m img{width:100%;display:block;border:1px solid var(--linha-clara)}
+}
 .lista-aplic li{border-bottom:1px solid var(--linha-clara)}
 .aplic-linha{
   display:grid;grid-template-columns:3.5rem 1fr 1.4fr auto;align-items:baseline;gap:2rem;
@@ -407,14 +422,20 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
     <span class="label reveal">02 · Aplicações</span>
     <h2 class="reveal">Onde o porcelanato vira <em>obra</em></h2>
     <p class="intro reveal">Do projeto à instalação, criamos peças esculpidas para os ambientes mais nobres da casa.</p>
-    <ul class="lista-aplic">
-      <li class="reveal"><div class="aplic-linha"><span class="n">i.</span><h3>Cozinhas</h3><p>Bancadas, ilhas e frentes esculpidas. O coração da casa em pedra contínua.</p><span class="seta">→</span></div></li>
-      <li class="reveal"><div class="aplic-linha"><span class="n">ii.</span><h3>Lavabos</h3><p>Cubas e bancadas esculpidas em peça única, do mármore ônix ao porcelanato.</p><span class="seta">→</span></div></li>
-      <li class="reveal"><div class="aplic-linha"><span class="n">iii.</span><h3>Pias &amp; bancadas esculpidas</h3><p>A especialidade da casa: a cuba nasce da própria chapa, sem emendas aparentes.</p><span class="seta">→</span></div></li>
-      <li class="reveal"><div class="aplic-linha"><span class="n">iv.</span><h3>Painéis &amp; nichos</h3><p>Paredes e nichos que emolduram o ambiente com veio contínuo.</p><span class="seta">→</span></div></li>
-      <li class="reveal"><div class="aplic-linha"><span class="n">v.</span><h3>Escadas</h3><p>Degraus revestidos com precisão milimétrica e caimento perfeito.</p><span class="seta">→</span></div></li>
-      <li class="reveal"><div class="aplic-linha"><span class="n">vi.</span><h3>Lareiras &amp; áreas gourmet</h3><p>Convívio com requinte: churrasqueiras, lareiras e espaços para receber.</p><span class="seta">→</span></div></li>
-    </ul>
+    <div class="aplic-wrap">
+      <ul class="lista-aplic">
+        <li class="reveal" data-foto="assets/aplic-cozinhas.jpg" data-cap="Cozinha com ilha em porcelanato"><div class="aplic-linha"><span class="n">i.</span><h3>Cozinhas</h3><p>Bancadas, ilhas e frentes esculpidas. O coração da casa em pedra contínua.</p><span class="seta">→</span></div><div class="aplic-foto-m"><img loading="lazy" src="assets/aplic-cozinhas.jpg" alt="Cozinha com ilha em porcelanato executada pela Oliveira"></div></li>
+        <li class="reveal" data-foto="assets/aplic-lavabos.jpg" data-cap="Lavabo em ônix translúcido iluminado"><div class="aplic-linha"><span class="n">ii.</span><h3>Lavabos</h3><p>Cubas e bancadas esculpidas em peça única, do mármore ônix ao porcelanato.</p><span class="seta">→</span></div><div class="aplic-foto-m"><img loading="lazy" src="assets/aplic-lavabos.jpg" alt="Lavabo em ônix translúcido iluminado executado pela Oliveira"></div></li>
+        <li class="reveal" data-foto="assets/aplic-pias.jpg" data-cap="Pia dupla esculpida na própria chapa"><div class="aplic-linha"><span class="n">iii.</span><h3>Pias &amp; bancadas esculpidas</h3><p>A especialidade da casa: a cuba nasce da própria chapa, sem emendas aparentes.</p><span class="seta">→</span></div><div class="aplic-foto-m"><img loading="lazy" src="assets/aplic-pias.jpg" alt="Pia dupla esculpida na própria chapa pela Oliveira"></div></li>
+        <li class="reveal" data-foto="assets/aplic-paineis.jpg" data-cap="Painel de TV em porcelanato com ripado"><div class="aplic-linha"><span class="n">iv.</span><h3>Painéis &amp; nichos</h3><p>Paredes e nichos que emolduram o ambiente com veio contínuo.</p><span class="seta">→</span></div><div class="aplic-foto-m"><img loading="lazy" src="assets/aplic-paineis.jpg" alt="Painel de TV em porcelanato com ripado executado pela Oliveira"></div></li>
+        <li class="reveal" data-foto="assets/aplic-escadas.jpg" data-cap="Escada flutuante em porcelanato"><div class="aplic-linha"><span class="n">v.</span><h3>Escadas</h3><p>Degraus revestidos com precisão milimétrica e caimento perfeito.</p><span class="seta">→</span></div><div class="aplic-foto-m"><img loading="lazy" src="assets/aplic-escadas.jpg" alt="Escada flutuante em porcelanato executada pela Oliveira"></div></li>
+        <li class="reveal" data-foto="assets/aplic-gourmet.jpg" data-cap="Área gourmet com ilha em pedra clara"><div class="aplic-linha"><span class="n">vi.</span><h3>Lareiras &amp; áreas gourmet</h3><p>Convívio com requinte: churrasqueiras, lareiras e espaços para receber.</p><span class="seta">→</span></div><div class="aplic-foto-m"><img loading="lazy" src="assets/aplic-gourmet.jpg" alt="Área gourmet com ilha em pedra clara executada pela Oliveira"></div></li>
+      </ul>
+      <figure class="aplic-preview reveal">
+        <div class="aplic-moldura"><img id="aplicImg" src="assets/aplic-cozinhas.jpg" alt="Cozinha com ilha em porcelanato" data-atual="assets/aplic-cozinhas.jpg"></div>
+        <figcaption id="aplicCap">Cozinha com ilha em porcelanato · trabalho Oliveira</figcaption>
+      </figure>
+    </div>
     <div class="materiais reveal">
       <span class="label">Materiais</span>
       <span><i>·</i>Porcelanato</span>
@@ -546,6 +567,31 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 // rastreio de cliques no WhatsApp (dispara quando o Pixel for instalado)
 document.querySelectorAll('a[href*="wa.me"]').forEach(a => {
   a.addEventListener('click', () => { if (window.fbq) fbq('track', 'Contact'); });
+});
+
+// aplicações: preview interativo (hover no desktop, toque no mobile)
+const aplicImg = document.getElementById('aplicImg');
+const aplicCap = document.getElementById('aplicCap');
+const aplicLis = document.querySelectorAll('.lista-aplic li');
+aplicLis.forEach(li => {
+  const pre = new Image(); pre.src = li.dataset.foto;
+  li.addEventListener('mouseenter', () => {
+    if (!aplicImg || window.innerWidth <= 920) return;
+    if (aplicImg.dataset.atual === li.dataset.foto) return;
+    aplicImg.style.opacity = 0;
+    setTimeout(() => {
+      aplicImg.src = li.dataset.foto;
+      aplicImg.alt = li.dataset.cap;
+      aplicImg.dataset.atual = li.dataset.foto;
+      aplicCap.textContent = li.dataset.cap + ' · trabalho Oliveira';
+      aplicImg.onload = () => { aplicImg.style.opacity = 1; };
+    }, 170);
+  });
+  li.addEventListener('click', () => {
+    if (window.innerWidth > 920) return;
+    aplicLis.forEach(o => { if (o !== li) o.classList.remove('aberta'); });
+    li.classList.toggle('aberta');
+  });
 });
 </script>
 </body>
