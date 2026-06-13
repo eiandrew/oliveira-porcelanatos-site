@@ -43,6 +43,63 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que é porcelanato esculpido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É a técnica de esculpir a própria chapa de porcelanato para criar cubas, bancadas e detalhes em peça única, sem emendas aparentes. O resultado une a beleza da pedra à durabilidade do porcelanato, com acabamento de alto padrão."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto custa uma bancada ou cuba esculpida em porcelanato?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada projeto é sob medida, então o valor depende do material escolhido, das dimensões e do nível de detalhe. O orçamento é gratuito e feito pelo WhatsApp, com visita técnica para conferir as medidas antes de qualquer compromisso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vocês atendem Balneário Camboriú, Itapema e Barra Velha?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Além de Joinville, atendemos toda a região e o litoral norte de Santa Catarina, incluindo Balneário Camboriú, Itapema e Barra Velha, levando o projeto pronto para a instalação."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual a diferença entre porcelanato esculpido e mármore ou granito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O porcelanato não mancha, resiste a riscos e suporta melhor o calor e a umidade do dia a dia, exigindo menos manutenção que o mármore. Esculpido em peça única, alcança um acabamento sofisticado sem as emendas comuns na pedra natural."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vocês cuidam do projeto, do corte e da instalação?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. A Oliveira acompanha cada etapa: medição, escolha do material, corte, escultura e instalação. Quem esculpe é quem instala, o que garante o acabamento do início ao fim."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto tempo leva para o projeto ficar pronto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende do tamanho e da complexidade, mas trabalhamos com prazos enxutos. Em boa parte dos casos a obra fica pronta em poucas semanas, do orçamento à instalação."
+      }
+    }
+  ]
+}
+</script>
+
 <!--
   META PIXEL: inserir quando a conta de anúncios estiver criada.
   Substituir SEU_PIXEL_ID e descomentar:
@@ -380,6 +437,18 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
 .repu-setas button{width:44px;height:44px;border-radius:50%;border:1px solid var(--linha);background:transparent;color:var(--grafite);font-size:1.2rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .3s,color .3s,border-color .3s}
 .repu-setas button:hover{background:var(--grafite);color:var(--porcelana);border-color:var(--grafite)}
 
+/* ---------- faq ---------- */
+.faq{padding:7.5rem 0;background:var(--porcelana)}
+.faq h2{font-size:clamp(1.9rem,4vw,3.2rem);margin:1.4rem 0 0}
+.faq-lista{margin-top:3.5rem;border-top:1px solid var(--linha)}
+.faq-item{border-bottom:1px solid var(--linha)}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:2rem;padding:1.7rem 0;font-family:var(--serif);font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:400;color:var(--grafite);transition:color .3s}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:hover{color:var(--bronze)}
+.faq-item summary .mais{font-family:var(--serif);font-size:1.6rem;line-height:1;color:var(--bronze);transition:transform .35s;flex-shrink:0}
+.faq-item[open] summary .mais{transform:rotate(45deg)}
+.faq-item .resp{padding:0 0 1.9rem;max-width:72ch;color:#4A453C;font-size:.98rem}
+
 /* ---------- reveals ---------- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
 .reveal.in{opacity:1;transform:none}
@@ -413,6 +482,7 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
       <li><a href="#processo">Processo</a></li>
       <li><a href="#projetos">Projetos</a></li>
       <li><a href="#avaliacoes">Avaliações</a></li>
+      <li><a href="#duvidas">Dúvidas</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
     <a class="btn-zap" href="https://wa.me/5547991154111?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Oliveira%20Porcelanatos%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
@@ -668,6 +738,39 @@ footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px
   </div>
 </section>
 
+<section class="faq" id="duvidas">
+  <div class="wrap">
+    <span class="label reveal">06 · Dúvidas</span>
+    <h2 class="reveal">Perguntas <em>frequentes</em></h2>
+    <div class="faq-lista">
+        <details class="faq-item reveal">
+          <summary>O que é porcelanato esculpido?<span class="mais" aria-hidden="true">+</span></summary>
+          <div class="resp">É a técnica de esculpir a própria chapa de porcelanato para criar cubas, bancadas e detalhes em peça única, sem emendas aparentes. O resultado une a beleza da pedra à durabilidade do porcelanato, com acabamento de alto padrão.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Quanto custa uma bancada ou cuba esculpida em porcelanato?<span class="mais" aria-hidden="true">+</span></summary>
+          <div class="resp">Cada projeto é sob medida, então o valor depende do material escolhido, das dimensões e do nível de detalhe. O orçamento é gratuito e feito pelo WhatsApp, com visita técnica para conferir as medidas antes de qualquer compromisso.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Vocês atendem Balneário Camboriú, Itapema e Barra Velha?<span class="mais" aria-hidden="true">+</span></summary>
+          <div class="resp">Sim. Além de Joinville, atendemos toda a região e o litoral norte de Santa Catarina, incluindo Balneário Camboriú, Itapema e Barra Velha, levando o projeto pronto para a instalação.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Qual a diferença entre porcelanato esculpido e mármore ou granito?<span class="mais" aria-hidden="true">+</span></summary>
+          <div class="resp">O porcelanato não mancha, resiste a riscos e suporta melhor o calor e a umidade do dia a dia, exigindo menos manutenção que o mármore. Esculpido em peça única, alcança um acabamento sofisticado sem as emendas comuns na pedra natural.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Vocês cuidam do projeto, do corte e da instalação?<span class="mais" aria-hidden="true">+</span></summary>
+          <div class="resp">Sim. A Oliveira acompanha cada etapa: medição, escolha do material, corte, escultura e instalação. Quem esculpe é quem instala, o que garante o acabamento do início ao fim.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Quanto tempo leva para o projeto ficar pronto?<span class="mais" aria-hidden="true">+</span></summary>
+          <div class="resp">Depende do tamanho e da complexidade, mas trabalhamos com prazos enxutos. Em boa parte dos casos a obra fica pronta em poucas semanas, do orçamento à instalação.</div>
+        </details>
+    </div>
+  </div>
+</section>
+
 <section class="cta-final" id="contato">
   <svg class="veios" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <path d="M-50,470 C300,400 520,520 760,440 S1160,330 1490,420"/>
@@ -736,6 +839,9 @@ aplicLis.forEach(li => {
 });
 
 function repuScroll(dir){var c=document.getElementById("repuCards");if(!c)return;var card=c.querySelector(".repu-card");var step=card?card.offsetWidth+22:320;c.scrollBy({left:dir*step,behavior:"smooth"});}
+
+// FAQ acordeão: ao abrir um item, fecha os demais
+document.querySelectorAll(".faq-item").forEach(function(d){d.addEventListener("toggle",function(){if(d.open){document.querySelectorAll(".faq-item").forEach(function(o){if(o!==d)o.open=false;});}});});
 </script>
 </body>
 </html>
