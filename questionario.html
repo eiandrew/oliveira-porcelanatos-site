@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oliveira Porcelanatos · Formulário rápido</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--porcelana:#f5f3ef;--grafite:#1b1b1d;--carvao:#2a2a2c;--bronze:#9a7b4f;--azul:#37508a;--linha:#e3ddd3;--suave:#fbfaf8;--cinza:#6b6660;--verde:#1f9d57}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Archivo',sans-serif;color:var(--carvao);background:#e9e6df;line-height:1.5;padding:22px 12px 60px}
+  .page{max-width:680px;margin:0 auto;background:#fff;border:1px solid var(--linha);border-radius:14px;padding:34px 26px;box-shadow:0 8px 34px rgba(0,0,0,.08)}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:1.7rem;color:var(--grafite);line-height:1.1}
+  .sub{font-style:italic;color:var(--cinza);font-size:1rem;margin-top:4px}
+  .intro{font-size:.96rem;color:#3a3733;margin-top:14px;background:var(--suave);border:1px solid var(--linha);border-left:3px solid var(--bronze);border-radius:9px;padding:13px 15px}
+  h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--azul);margin:26px 0 2px;padding-top:10px;border-top:1px solid var(--linha)}
+  h2:first-of-type{border-top:none}
+  .qblock{margin:16px 0}
+  .q{font-weight:700;font-size:.98rem;margin-bottom:8px}
+  label.op{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;border:1px solid var(--linha);border-radius:10px;margin:7px 0;cursor:pointer;font-size:.96rem;background:#fff;transition:border-color .15s,background .15s}
+  label.op:hover{border-color:var(--bronze)}
+  label.op input{margin-top:2px;width:19px;height:19px;accent-color:var(--azul);flex-shrink:0;cursor:pointer}
+  label.op:has(input:checked){border-color:var(--azul);background:#f1f4fb}
+  input[type=text].single,input[type=text].outro,input[type=text].extra,textarea{width:100%;font-family:'Archivo',sans-serif;font-size:.97rem;color:var(--grafite);border:1px solid var(--linha);border-radius:9px;padding:11px 13px;margin-top:6px;background:var(--suave)}
+  input:focus,textarea:focus{outline:none;border-color:var(--azul);background:#fff}
+  textarea{min-height:62px;resize:vertical}
+  .outrowrap{margin-top:4px}
+  .acoes{margin-top:30px;padding:18px 0 4px;border-top:1px solid var(--linha)}
+  .btn{display:block;width:100%;font-family:'Archivo';font-weight:700;font-size:1.02rem;border:none;border-radius:11px;padding:15px;cursor:pointer;transition:.15s;margin-top:10px}
+  .btn-wa{background:var(--verde);color:#fff}
+  .btn-wa:hover{filter:brightness(1.06)}
+  .btn-cp{background:#fff;color:var(--azul);border:1.5px solid var(--azul)}
+  .btn-cp:hover{background:var(--azul);color:#fff}
+  .dica{font-size:.84rem;color:var(--cinza);text-align:center;margin-top:12px}
+  .end{margin-top:18px;font-style:italic;color:var(--cinza);font-size:.94rem}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--grafite);color:#fff;padding:12px 22px;border-radius:11px;font-size:.92rem;opacity:0;pointer-events:none;transition:.25s;z-index:99}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<form class="page" id="form" autocomplete="off">
+  <h1>Oliveira Porcelanatos</h1>
+  <div class="sub">Algumas perguntas rápidas para acertar a divulgação de vocês</div>
+  <div class="intro">Bruno e Patricia, é rápido: na maioria, é só tocar na opção. Não existe resposta errada, quero entender a visão de vocês. O que não souberem, podem deixar em branco. No final, é só tocar em <b>Enviar respostas pelo WhatsApp</b>.</div>
+
+  <h2>1. O que vocês mais querem</h2>
+  <div class="qblock" data-q="1.1 O que mais importa no próximo ano (até 2)">
+    <div class="q">1.1  No próximo ano, o que mais importa para vocês? <span style="font-weight:400;color:var(--cinza)">(toquem em até 2)</span></div>
+    <label class="op"><input type="checkbox" value="Vender mais, ter mais obras"> Vender mais, ter mais obras</label>
+    <label class="op"><input type="checkbox" value="Ser a marca mais sofisticada da região"> Ser a marca mais sofisticada da região</label>
+    <label class="op"><input type="checkbox" value="Ser os mais conhecidos"> Ser os mais conhecidos, aparecer para todo mundo</label>
+    <label class="op"><input type="checkbox" value="Atrair projetos maiores e mais caros"> Atrair projetos maiores e mais caros</label>
+    <div class="outrowrap"><input type="text" class="outro" data-prefix="Outro" placeholder="Outro (opcional)"></div>
+  </div>
+  <div class="qblock" data-q="1.2 Até onde querem crescer">
+    <div class="q">1.2  Até onde vocês querem crescer?</div>
+    <label class="op"><input type="radio" name="q12" value="Manter o tamanho de hoje, com mais qualidade"> Manter o tamanho de hoje, com mais qualidade</label>
+    <label class="op"><input type="radio" name="q12" value="Crescer com calma, sem perder o controle"> Crescer com calma, sem perder o controle</label>
+    <label class="op"><input type="radio" name="q12" value="Crescer o máximo possível, prontos para escalar"> Crescer o máximo possível, estamos prontos para escalar</label>
+  </div>
+
+  <h2>2. Como vocês querem ser vistos</h2>
+  <div class="qblock" data-q="2.1 Conhecida por uma só coisa">
+    <div class="q">2.1  Se a Oliveira fosse conhecida por uma só coisa, seria por ser:</div>
+    <label class="op"><input type="radio" name="q21" value="A mais exclusiva e luxuosa"> A mais exclusiva e luxuosa</label>
+    <label class="op"><input type="radio" name="q21" value="A melhor relação entre qualidade e preço"> A melhor relação entre qualidade e preço</label>
+    <label class="op"><input type="radio" name="q21" value="A mais conhecida e popular"> A mais conhecida e popular</label>
+    <label class="op"><input type="radio" name="q21" value="A mais confiável e tradicional"> A mais confiável e tradicional</label>
+  </div>
+  <div class="qblock" data-q="2.2 Preferem atrair">
+    <div class="q">2.2  Vocês preferem atrair:</div>
+    <label class="op"><input type="radio" name="q22" value="Poucos clientes, projetos grandes e caros"> Poucos clientes, projetos grandes e caros</label>
+    <label class="op"><input type="radio" name="q22" value="Muitos clientes, projetos de todos os tamanhos"> Muitos clientes, projetos de todos os tamanhos</label>
+    <label class="op"><input type="radio" name="q22" value="Um equilíbrio dos dois"> Um equilíbrio dos dois</label>
+  </div>
+
+  <h2>3. Preço e concorrência</h2>
+  <div class="qblock" data-q="3.1 Preço de vocês no mercado">
+    <div class="q">3.1  No mercado de vocês, o preço de vocês é:</div>
+    <label class="op"><input type="radio" name="q31" value="Dos mais altos (premium)"> Dos mais altos (somos premium)</label>
+    <label class="op"><input type="radio" name="q31" value="Na média"> Na média</label>
+    <label class="op"><input type="radio" name="q31" value="Mais em conta que a maioria"> Mais em conta que a maioria</label>
+  </div>
+  <div class="qblock" data-q="3.2 Faixa de preço de um projeto médio">
+    <div class="q">3.2  Quanto costuma custar um projeto médio de vocês hoje? <span style="font-weight:400;color:var(--cinza)">(uma faixa já ajuda)</span></div>
+    <input type="text" class="single" placeholder="Ex.: de R$ 5.000 a R$ 15.000">
+  </div>
+  <div class="qblock" data-q="3.3 Principais concorrentes">
+    <div class="q">3.3  Quem vocês veem como principais concorrentes?</div>
+    <input type="text" class="single" placeholder="Pode citar nomes">
+  </div>
+  <div class="qblock" data-q="3.4 Por que o cliente escolhe a Oliveira">
+    <div class="q">3.4  Na visão de vocês, por que o cliente escolhe a Oliveira e não o concorrente?</div>
+    <textarea placeholder="O que faz a diferença"></textarea>
+  </div>
+
+  <h2>4. O que vocês mais querem vender</h2>
+  <div class="qblock" data-q="4.1 Trabalhos que mais querem atrair">
+    <div class="q">4.1  Quais trabalhos vocês mais querem atrair? <span style="font-weight:400;color:var(--cinza)">(podem marcar vários)</span></div>
+    <label class="op"><input type="checkbox" value="Pia esculpida / lavabo"> Pia esculpida / lavabo</label>
+    <label class="op"><input type="checkbox" value="Cozinha"> Cozinha</label>
+    <label class="op"><input type="checkbox" value="Banheiro"> Banheiro</label>
+    <label class="op"><input type="checkbox" value="Área gourmet / churrasqueira"> Área gourmet / churrasqueira</label>
+    <label class="op"><input type="checkbox" value="Lareira"> Lareira</label>
+    <label class="op"><input type="checkbox" value="Comercial (clínicas, lojas, studios)"> Comercial (clínicas, lojas, studios)</label>
+    <div class="outrowrap"><input type="text" class="outro" data-prefix="Outro" placeholder="Outro (opcional)"></div>
+  </div>
+  <div class="qblock" data-q="4.2 Trabalho que preferem NÃO fazer">
+    <div class="q">4.2  Tem algum tipo de trabalho que vocês preferem NÃO fazer?</div>
+    <input type="text" class="single" placeholder="Se sim, qual">
+  </div>
+
+  <h2>5. Região que vocês atendem</h2>
+  <div class="qblock" data-q="5.1 Cidades que atendem hoje">
+    <div class="q">5.1  Quais cidades vocês atendem hoje?</div>
+    <input type="text" class="single" placeholder="Ex.: Joinville, Balneário, Itapema...">
+  </div>
+  <div class="qblock" data-q="5.2 Até onde topam ir (com instalação)">
+    <div class="q">5.2  Até onde vocês topam ir, já contando a instalação?</div>
+    <input type="text" class="single" placeholder="Distância ou cidades">
+  </div>
+  <div class="qblock" data-q="5.3 Região a evitar">
+    <div class="q">5.3  Tem alguma região que prefiram evitar?</div>
+    <input type="text" class="single" placeholder="Se tiver, qual">
+  </div>
+
+  <h2>6. Capacidade <span style="font-weight:400;font-size:.8rem;color:var(--cinza)">(me ajuda a dosar a divulgação)</span></h2>
+  <div class="qblock" data-q="6.1 Obras por mês com tranquilidade">
+    <div class="q">6.1  Quantas obras vocês conseguem fechar e entregar por mês com tranquilidade?</div>
+    <input type="text" class="single" placeholder="Mais ou menos quantas">
+  </div>
+  <div class="qblock" data-q="6.2 Contatos novos por semana que atendem bem">
+    <div class="q">6.2  Quantos contatos novos por semana vocês conseguem atender bem?</div>
+    <input type="text" class="single" placeholder="Mais ou menos quantos">
+  </div>
+  <div class="qblock" data-q="6.3 Quem responde o WhatsApp e em quanto tempo">
+    <div class="q">6.3  Quem responde o WhatsApp dos clientes novos, e em quanto tempo costuma responder?</div>
+    <input type="text" class="single" placeholder="Ex.: a Patricia, em poucos minutos">
+  </div>
+  <div class="qblock" data-q="6.4 Divulgar sem parar ou com limite">
+    <div class="q">6.4  Podemos divulgar sem parar até vocês pedirem, ou preferem um limite?</div>
+    <label class="op"><input type="radio" name="q64" value="Pode divulgar sem parar, a gente avisa quando apertar"> Pode divulgar sem parar, a gente avisa quando apertar</label>
+    <label class="op"><input type="radio" name="q64" value="Preferimos um limite"> Preferimos um limite de contatos por semana ou mês</label>
+    <div class="outrowrap"><input type="text" class="extra" data-prefix="Limite" placeholder="Se for limite, qual? (opcional)"></div>
+  </div>
+  <div class="qblock" data-q="6.5 Época de mais ou menos movimento">
+    <div class="q">6.5  Tem época do ano de mais ou de menos movimento?</div>
+    <input type="text" class="single" placeholder="Quando enche e quando dá uma aliviada">
+  </div>
+
+  <h2>7. Uma ideia para agilizar os contatos</h2>
+  <div class="qblock" data-q="7.1 Interesse em atendimento inicial por chat com IA">
+    <div class="q">7.1  Teriam interesse em um atendimento inicial por chat com inteligência artificial, que responde os clientes na hora, tira as primeiras dúvidas e já organiza o pedido antes de chegar até vocês?</div>
+    <label class="op"><input type="radio" name="q71" value="Sim, gostei da ideia"> Sim, gostei da ideia</label>
+    <label class="op"><input type="radio" name="q71" value="Talvez, quero entender melhor como funciona"> Talvez, quero entender melhor como funciona</label>
+    <label class="op"><input type="radio" name="q71" value="Não, preferimos atender pessoalmente desde o começo"> Não, preferimos atender pessoalmente desde o começo</label>
+    <div class="outrowrap"><input type="text" class="extra" data-prefix="Comentário" placeholder="Quer comentar algo sobre isso? (opcional)"></div>
+  </div>
+
+  <div class="end">Obrigado, pessoal! É só tocar no botão abaixo que as respostas vêm direto pra mim.</div>
+
+  <div class="acoes">
+    <button type="button" class="btn btn-wa" onclick="enviarWhats()">📲  Enviar respostas pelo WhatsApp</button>
+    <button type="button" class="btn btn-cp" onclick="copiarRespostas()">Copiar respostas</button>
+    <div class="dica">Ao tocar em enviar, o WhatsApp abre com as respostas prontas. É só escolher a conversa do Andrew e enviar.</div>
+  </div>
+</form>
+
+<div class="toast" id="toast"></div>
+
+<script>
+function compilar(){
+  var linhas = ['*Oliveira Porcelanatos — respostas do formulário*', ''];
+  document.querySelectorAll('.qblock').forEach(function(b){
+    var partes = [];
+    b.querySelectorAll('input[type=checkbox]:checked, input[type=radio]:checked').forEach(function(i){ partes.push(i.value); });
+    b.querySelectorAll('input.outro, input.extra').forEach(function(i){
+      if(i.value.trim()) partes.push((i.dataset.prefix? i.dataset.prefix+': ' : '') + i.value.trim());
+    });
+    b.querySelectorAll('input.single, textarea').forEach(function(i){
+      if(i.value.trim()) partes.push(i.value.trim());
+    });
+    linhas.push('▸ ' + b.dataset.q);
+    linhas.push('   ' + (partes.length ? partes.join('  |  ') : '(sem resposta)'));
+    linhas.push('');
+  });
+  return linhas.join('\n');
+}
+function enviarWhats(){
+  var txt = compilar();
+  window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(txt), '_blank');
+}
+function copiarRespostas(){
+  var txt = compilar();
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(txt).then(function(){toast('Respostas copiadas ✓');}).catch(function(){fb(txt);});
+  } else { fb(txt); }
+}
+function fb(txt){
+  var ta=document.createElement('textarea'); ta.value=txt; ta.style.position='fixed'; ta.style.opacity=0;
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy'); toast('Respostas copiadas ✓');}catch(e){alert(txt);}
+  document.body.removeChild(ta);
+}
+var tEl=document.getElementById('toast'), tmr;
+function toast(m){ tEl.textContent=m; tEl.classList.add('show'); clearTimeout(tmr); tmr=setTimeout(function(){tEl.classList.remove('show');},1600); }
+</script>
+
+</body>
+</html>
