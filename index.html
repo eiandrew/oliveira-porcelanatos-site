@@ -119,6 +119,16 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1409799454353102&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel -->
 
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6F4FPWEDV4"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6F4FPWEDV4');
+</script>
+<!-- End Google Analytics -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
@@ -813,9 +823,12 @@ const io = new IntersectionObserver(es => {
 }, { threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-// rastreio de cliques no WhatsApp (dispara quando o Pixel for instalado)
+// rastreio de cliques no WhatsApp (Pixel + GA4)
 document.querySelectorAll('a[href*="wa.me"]').forEach(a => {
-  a.addEventListener('click', () => { if (window.fbq) fbq('track', 'Contact'); });
+  a.addEventListener('click', () => {
+    if (window.fbq) fbq('track', 'Contact');
+    if (window.gtag) gtag('event', 'whatsapp_click', { event_category: 'lead', event_label: 'WhatsApp' });
+  });
 });
 
 // aplicações: preview interativo (hover no desktop, toque no mobile)
