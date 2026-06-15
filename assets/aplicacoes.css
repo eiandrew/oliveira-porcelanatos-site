@@ -1,0 +1,118 @@
+/* ============================================================
+   Oliveira Porcelanatos — CSS das páginas de aplicação (SEO)
+   Mesma identidade do index. Carregado por /pia-lavabo-esculpido/,
+   /cozinha-porcelanato/, /area-gourmet-porcelanato/.
+   ============================================================ */
+:root{
+  --porcelana:#F4F0E9; --areia:#EAE3D5; --grafite:#181714; --grafite-2:#23211C;
+  --bronze:#8F7256; --bronze-claro:#C2A789; --azul:#4A68AE; --azul-escuro:#3A5390;
+  --azul-claro:#93A7D4; --linha:rgba(24,23,20,.16); --linha-clara:rgba(244,240,233,.22);
+  --serif:'Fraunces',Georgia,serif; --sans:'Archivo',Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--porcelana);color:var(--grafite);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")}
+::selection{background:var(--bronze);color:var(--porcelana)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 6vw}
+.label{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--azul)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;letter-spacing:-.01em}
+em{font-style:italic;font-weight:300}
+a{color:inherit}
+
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:color-mix(in srgb, var(--porcelana) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--linha)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.marca{font-family:var(--serif);font-size:1.25rem;letter-spacing:.02em;text-decoration:none;color:var(--azul)}
+.marca span{color:var(--grafite);font-style:italic}
+.nav-links{display:flex;gap:2.2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--grafite);font-size:.82rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--azul);transition:width .35s}
+.nav-links a:hover::after{width:100%}
+@media(max-width:820px){.nav-links{display:none}}
+.btn-zap{display:inline-flex;align-items:center;gap:.55rem;background:var(--grafite);color:var(--porcelana);text-decoration:none;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.78rem 1.5rem;border-radius:99px;border:1px solid var(--grafite);transition:background .3s,color .3s}
+.btn-zap:hover{background:transparent;color:var(--grafite)}
+.btn-zap svg{width:15px;height:15px;fill:currentColor}
+.btn-zap.grande{padding:1.05rem 2.2rem;font-size:.86rem}
+
+/* ---------- hero da aplicação ---------- */
+.ap-hero{min-height:78svh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;padding:72px 0 0;overflow:hidden;background-position:center 32%;background-size:cover;background-repeat:no-repeat}
+.ap-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg, rgba(24,23,20,.94) 0%, rgba(24,23,20,.8) 40%, rgba(24,23,20,.5) 72%, rgba(24,23,20,.32) 100%)}
+.ap-hero-inner{position:relative;z-index:2;padding-bottom:4.5rem}
+.bc{display:flex;gap:.5rem;align-items:center;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#9C958A;margin-bottom:1.6rem}
+.bc a{color:var(--azul-claro);text-decoration:none}
+.bc a:hover{color:var(--bronze-claro)}
+.ap-hero h1{font-size:clamp(2.4rem,6vw,5.2rem);max-width:15ch;color:var(--porcelana)}
+.ap-hero h1 em{color:var(--azul-claro)}
+.ap-hero .sub{margin-top:1.8rem;max-width:48ch;color:#CFC8BA;font-size:1.05rem}
+.ap-hero .ctas{display:flex;align-items:center;gap:1.6rem;margin-top:2.6rem;flex-wrap:wrap}
+.ap-hero .btn-zap{background:var(--porcelana);color:var(--grafite);border-color:var(--porcelana)}
+.ap-hero .btn-zap:hover{background:transparent;color:var(--porcelana)}
+.ap-hero .fone{color:#CFC8BA;font-size:.85rem;letter-spacing:.08em;text-decoration:none}
+.ap-hero .fone:hover{color:var(--porcelana)}
+
+/* ---------- bloco de conteúdo ---------- */
+.ap-sec{padding:7rem 0}
+.ap-sec.alt{background:var(--areia)}
+.ap-duo{display:grid;grid-template-columns:1.1fr 1fr;gap:4.5rem;align-items:center}
+.ap-duo.inv{grid-template-columns:1fr 1.1fr}
+@media(max-width:920px){.ap-duo,.ap-duo.inv{grid-template-columns:1fr;gap:2.6rem}}
+.ap-sec h2{font-size:clamp(1.8rem,3.8vw,3rem);max-width:20ch;margin:1.2rem 0 0}
+.ap-sec p{color:#4A453C;font-size:1rem;margin-top:1.4rem;max-width:54ch}
+.ap-sec p strong{color:var(--grafite);font-weight:600}
+.foto-quadro{position:relative}
+.foto-quadro img{width:100%;display:block;border:1px solid var(--linha)}
+.foto-quadro::after{content:"";position:absolute;top:14px;left:14px;width:100%;height:100%;border:1px solid var(--azul);opacity:.35;z-index:-1}
+.foto-quadro.dir::after{left:auto;right:14px}
+.foto-quadro figcaption{margin-top:.9rem;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze)}
+
+/* ---------- benefícios ---------- */
+.benef{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:1rem;border-top:1px solid var(--linha)}
+@media(max-width:820px){.benef{grid-template-columns:1fr}}
+.benef .it{padding:2.2rem 2rem 0 0}
+.benef .it+.it{border-left:1px solid var(--linha);padding-left:2rem}
+@media(max-width:820px){.benef .it+.it{border-left:none;border-top:1px solid var(--linha);padding-left:0}}
+.benef .idx{font-family:var(--serif);font-style:italic;color:var(--bronze);font-size:.95rem}
+.benef h3{font-size:1.3rem;margin:.8rem 0 .5rem}
+.benef p{font-size:.92rem;color:#4A453C;margin:0;max-width:38ch}
+
+/* ---------- lista de aplicações relacionadas ---------- */
+.rel{display:flex;gap:1.6rem;flex-wrap:wrap;margin-top:2.6rem}
+.rel a{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--grafite);font-size:.84rem;font-weight:600;letter-spacing:.05em;border:1px solid var(--linha);border-radius:99px;padding:.7rem 1.3rem;transition:border-color .3s,color .3s}
+.rel a:hover{border-color:var(--azul);color:var(--azul)}
+
+/* ---------- prova social ---------- */
+.ap-prova{background:var(--grafite);color:var(--porcelana);padding:5.5rem 0;text-align:center}
+.ap-prova .nota{font-family:var(--serif);font-size:clamp(3.4rem,7vw,5rem);line-height:1;color:var(--porcelana)}
+.ap-prova .nota sup{font-size:.28em;color:var(--bronze-claro);font-style:italic;margin-left:.1em;vertical-align:super}
+.ap-prova .estrelas{color:var(--bronze-claro);font-size:1.4rem;letter-spacing:.2rem;margin:.6rem 0}
+.ap-prova p{color:#B7B0A4;max-width:40ch;margin:1rem auto 0;font-size:.95rem}
+.ap-prova .quote{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.25rem;max-width:34ch;margin:0 auto;color:var(--porcelana)}
+
+/* ---------- FAQ ---------- */
+.faq{padding:7rem 0}
+.faq h2{font-size:clamp(1.8rem,3.8vw,3rem);margin-bottom:3rem}
+.faq details{border-top:1px solid var(--linha);padding:1.5rem 0}
+.faq details:last-of-type{border-bottom:1px solid var(--linha)}
+.faq summary{font-family:var(--serif);font-size:1.2rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--sans);color:var(--bronze);font-size:1.6rem;font-weight:300;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin-top:1rem;color:#4A453C;font-size:.98rem;max-width:70ch}
+
+/* ---------- CTA final ---------- */
+.cta-final{color:var(--porcelana);padding:8rem 0;text-align:center;position:relative;overflow:hidden;background:linear-gradient(rgba(24,23,20,.93), rgba(24,23,20,.96)), url("../assets/ambiente-claro.jpg") center 30%/cover no-repeat}
+.cta-final h2{font-size:clamp(2rem,5vw,3.8rem);max-width:18ch;margin:1.4rem auto 0}
+.cta-final p{margin:1.6rem auto 0;max-width:44ch;color:#B7B0A4}
+.cta-final .btn-zap{background:var(--porcelana);color:var(--grafite);border-color:var(--porcelana);margin-top:2.6rem}
+.cta-final .btn-zap:hover{background:transparent;color:var(--porcelana)}
+.cta-final .fone{display:block;margin-top:1.5rem;color:#7E776B;font-size:.85rem;letter-spacing:.1em;text-decoration:none}
+
+/* ---------- footer ---------- */
+footer{background:var(--grafite-2);color:#9C958A;padding:3.2rem 0;border-top:1px solid var(--linha-clara)}
+.rodape{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.rodape .marca{color:var(--porcelana);font-size:1.05rem}
+.rodape nav{display:flex;gap:1.8rem;flex-wrap:wrap}
+.rodape a{color:#9C958A;text-decoration:none;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;transition:color .3s}
+.rodape a:hover{color:var(--bronze-claro)}
+.rodape small{font-size:.75rem}
