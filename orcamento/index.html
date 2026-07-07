@@ -140,7 +140,7 @@ main{flex:1;position:relative;z-index:1;padding:2.4rem 0 4rem}
 .op.sel{border-color:var(--azul-claro);box-shadow:inset 0 0 0 1px var(--azul-claro)}
 .op.sel .seta{opacity:1;color:var(--azul-claro)}
 .op.destaque{font-weight:600}
-.op,.btn-zap,.btn-voltar,.tel-toggle{touch-action:manipulation}
+.op,.btn-zap,.btn-voltar{touch-action:manipulation}
 
 /* chips (cidades) */
 .chips{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;margin-top:1.4rem}
@@ -186,19 +186,6 @@ input::placeholder{color:var(--texto-apagado);opacity:1}
 /* prova social discreta */
 .prova-mini{margin-top:1.3rem;font-size:.85rem;color:var(--texto-apagado)}
 .prova-mini .estrelas{color:var(--bronze-claro);letter-spacing:.12em;margin-right:.5rem}
-
-/* whatsapp opcional colapsado */
-.tel-toggle{
-  background:none;border:none;cursor:pointer;font-family:var(--sans);
-  color:var(--azul-claro);font-size:.86rem;font-weight:500;
-  min-height:44px;padding:.55rem .2rem;text-align:left;
-  text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--azul-claro);
-  transition:color .3s;
-}
-.tel-toggle:hover{color:var(--porcelana)}
-.tel-campo{display:none;margin-top:1rem}
-.tel-campo.aberto{display:block;animation:entrar .3s}
-.tel-campo .mini{font-size:.8rem;color:var(--texto-apagado);margin-bottom:.5rem}
 
 footer{border-top:1px solid var(--linha-clara);padding:1.4rem 0;position:relative;z-index:1}
 .rodape{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;max-width:720px;margin:0 auto;padding:0 6vw}
@@ -321,13 +308,6 @@ footer{border-top:1px solid var(--linha-clara);padding:1.4rem 0;position:relativ
         <button type="button" class="btn-voltar">← Voltar</button>
       </div>
       <p class="prova-mini"><span class="estrelas">★★★★★</span><strong>5,0</strong> · 94 avaliações no Google</p>
-      <div style="margin-top:1.4rem">
-        <button type="button" class="tel-toggle" id="telToggle">Prefere que a Oliveira te retorne? Deixe seu WhatsApp (opcional)</button>
-        <div class="tel-campo" id="telCampo">
-          <p class="mini">Usamos só para retornar sobre este orçamento. Nada de lista de transmissão.</p>
-          <input type="tel" id="inpTel" placeholder="(47) 99999-9999" aria-label="Seu WhatsApp com DDD (opcional)" inputmode="tel" autocomplete="tel" enterkeyhint="done" maxlength="19">
-        </div>
-      </div>
     </section>
 
   </div>
@@ -441,14 +421,6 @@ footer{border-top:1px solid var(--linha-clara);padding:1.4rem 0;position:relativ
     }catch(e){}
   }
 
-  /* ============ telefone ============ */
-  function formatTel(d){
-    if(d.length > 2 && d.length <= 6) return '(' + d.slice(0,2) + ') ' + d.slice(2);
-    if(d.length > 6 && d.length <= 10) return '(' + d.slice(0,2) + ') ' + d.slice(2,6) + '-' + d.slice(6);
-    if(d.length === 11) return '(' + d.slice(0,2) + ') ' + d.slice(2,7) + '-' + d.slice(7);
-    return d;
-  }
-
   /* ============ mensagem do whatsapp ============ */
   function textoWa(){
     var abertura = 'Olá! Meu nome é *' + (state.nome || 'cliente do site') +
@@ -461,7 +433,6 @@ footer{border-top:1px solid var(--linha-clara);padding:1.4rem 0;position:relativ
       '*Projeto:* ' + state.projetoMsg,
       '*Cidade:* ' + state.cidadeMsg
     ];
-    if(state.whatsapp) linhas.push('*WhatsApp p/ retorno:* ' + formatTel(state.whatsapp));
     return linhas.join('\n');
   }
   function linkWa(texto){
@@ -606,29 +577,6 @@ footer{border-top:1px solid var(--linha-clara);padding:1.4rem 0;position:relativ
     });
   });
 
-  /* whatsapp opcional colapsado */
-  document.getElementById('telToggle').addEventListener('click', function(){
-    var c = document.getElementById('telCampo');
-    c.classList.toggle('aberto');
-    if(c.classList.contains('aberto')){
-      setTimeout(function(){ document.getElementById('inpTel').focus(); }, 80);
-    }
-  });
-
-  /* máscara BR simples no telefone (celular 11, fixo 10, paste com +55) */
-  var inpTel = document.getElementById('inpTel');
-  inpTel.addEventListener('input', function(){
-    var d = inpTel.value.replace(/\D/g,'');
-    if(d.length > 11 && d.indexOf('55') === 0) d = d.slice(2);
-    d = d.slice(0,11);
-    inpTel.value = formatTel(d);
-    state.whatsapp = d; salvar();
-    syncCta();
-  });
-  inpTel.addEventListener('blur', function(){
-    if(state.whatsapp) beacon('telefone_informado');
-  });
-
   /* nome */
   var inpNome = document.getElementById('inpNome');
   var erroNome = document.getElementById('erroNome');
@@ -690,7 +638,6 @@ footer{border-top:1px solid var(--linha-clara);padding:1.4rem 0;position:relativ
   /* restaura a tela onde parou */
   if(state.step > 1){
     if(state.nome) inpNome.value = state.nome;
-    if(state.whatsapp) inpTel.value = formatTel(state.whatsapp);
     mostrar(state.step);
   }
 })();
