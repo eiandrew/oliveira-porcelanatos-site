@@ -278,10 +278,10 @@ footer{border-top:1px solid var(--linha-clara);padding:1.4rem 0;position:relativ
       <h2>Como está o projeto desse ambiente?</h2>
       <p class="dica">Assim já sabemos o próximo passo: projeto, medidas ou visita.</p>
       <ul class="opcoes">
-        <li><button type="button" class="op" data-campo="projeto" data-val="Tenho projeto de arquiteto(a)" data-msg="tenho projeto de arquiteto(a)" data-perfil="com-projeto">Tenho projeto de arquiteto(a)<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="projeto" data-val="Tenho medidas ou um rascunho" data-msg="tenho medidas/rascunho" data-perfil="sem-projeto">Tenho medidas ou um rascunho<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="projeto" data-val="Ainda não tenho medidas" data-msg="ainda sem medidas" data-perfil="sem-projeto">Ainda não tenho medidas<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="projeto" data-val="Sou arquiteto(a) ou designer, especificando para um cliente" data-msg="sou arquiteto(a)/designer, especificando para cliente" data-perfil="b2b">Sou arquiteto(a) ou designer, especificando para um cliente<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="projeto" data-val="Tenho projeto de arquiteto(a)" data-msg="Tenho projeto de arquiteto(a)" data-perfil="com-projeto">Tenho projeto de arquiteto(a)<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="projeto" data-val="Tenho medidas ou um rascunho" data-msg="Tenho medidas/rascunho" data-perfil="sem-projeto">Tenho medidas ou um rascunho<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="projeto" data-val="Ainda não tenho medidas" data-msg="Ainda sem medidas" data-perfil="sem-projeto">Ainda não tenho medidas<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="projeto" data-val="Sou arquiteto(a) ou designer, especificando para um cliente" data-msg="Sou arquiteto(a)/designer, especificando para cliente" data-perfil="b2b">Sou arquiteto(a) ou designer, especificando para um cliente<span class="seta">→</span></button></li>
       </ul>
       <div class="acoes"><button type="button" class="btn-voltar">← Voltar</button></div>
     </section>
@@ -451,16 +451,17 @@ footer{border-top:1px solid var(--linha-clara);padding:1.4rem 0;position:relativ
 
   /* ============ mensagem do whatsapp ============ */
   function textoWa(){
-    var abertura = 'Olá! Aqui é ' + (state.nome || 'cliente do site') +
-      '. Acabei de montar meu pré-orçamento no site' + (REF ? ' (cód. ' + REF + ')' : '') + ':';
+    var abertura = 'Olá! Meu nome é *' + (state.nome || 'cliente do site') +
+      '*. Acabei de montar meu pré-orçamento no site' + (REF ? ' (cód. ' + REF + ')' : '') + ':';
     var linhas = [
       abertura,
-      '• Ambiente: ' + state.ambienteMsg,
-      '• Momento: ' + state.momentoMsg,
-      '• Projeto: ' + state.projetoMsg,
-      '• Cidade: ' + state.cidadeMsg
+      '',
+      '*Ambiente:* ' + state.ambienteMsg,
+      '*Momento:* ' + state.momentoMsg,
+      '*Projeto:* ' + state.projetoMsg,
+      '*Cidade:* ' + state.cidadeMsg
     ];
-    if(state.whatsapp) linhas.push('• WhatsApp p/ retorno: ' + formatTel(state.whatsapp));
+    if(state.whatsapp) linhas.push('*WhatsApp p/ retorno:* ' + formatTel(state.whatsapp));
     return linhas.join('\n');
   }
   function linkWa(texto){
