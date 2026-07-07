@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
 <title>Pré-orçamento em 30 segundos | Oliveira Porcelanatos</title>
-<meta name="description" content="Conte em quatro toques o que você quer transformar e siga direto para o WhatsApp da Oliveira Porcelanatos com seu pré-orçamento montado.">
+<meta name="description" content="Monte seu pré-orçamento em quatro toques e envie pelo WhatsApp da Oliveira Porcelanatos. Rápido, sem cadastro.">
 <meta name="robots" content="noindex,follow">
 <link rel="canonical" href="https://oliveiraporcelanatos.com.br/orcamento/">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="../assets/favicon-180.png">
 
 <meta property="og:title" content="Seu pré-orçamento em 30 segundos | Oliveira Porcelanatos">
-<meta property="og:description" content="Quatro toques, o seu primeiro nome e você segue direto para o WhatsApp da Patricia, que já te recebe sabendo o que o seu projeto precisa.">
+<meta property="og:description" content="Quatro toques, sem cadastro. Seu pré-orçamento sai pronto no WhatsApp da Oliveira.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://oliveiraporcelanatos.com.br/orcamento/">
 <meta property="og:image" content="https://oliveiraporcelanatos.com.br/assets/hero.jpg">
@@ -56,19 +56,20 @@ gtag('config', 'G-6F4FPWEDV4');
   --grafite-2:#23211C;
   --bronze:#8F7256;
   --bronze-claro:#C2A789;
-  --bronze-texto:#7A5F45; /* bronze com contraste AA p/ texto pequeno sobre porcelana */
   --azul:#4A68AE;
   --azul-escuro:#3A5390;
   --azul-claro:#93A7D4;
-  --linha:rgba(24,23,20,.16);
+  --linha-clara:rgba(244,240,233,.22);
+  --texto-suave:#B7B0A4;
+  --texto-apagado:#9C958A;
   --serif:'Fraunces',Georgia,serif;
   --sans:'Archivo',Helvetica,Arial,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:hidden}
 body{
-  background:var(--porcelana);
-  color:var(--grafite);
+  background:var(--grafite);
+  color:var(--porcelana);
   font-family:var(--sans);
   font-size:16px;
   line-height:1.6;
@@ -88,33 +89,33 @@ body::after{
 .wrap{max-width:720px;margin:0 auto;padding:0 6vw;width:100%}
 .label{
   font-family:var(--sans);font-size:.72rem;font-weight:600;
-  letter-spacing:.22em;text-transform:uppercase;color:var(--azul);
+  letter-spacing:.22em;text-transform:uppercase;color:var(--azul-claro);
 }
-h1,h2{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacing:-.01em}
+h1,h2{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacing:-.01em;color:var(--porcelana)}
 em{font-style:italic;font-weight:300}
 
 /* ---------- topo ---------- */
-header{border-bottom:1px solid var(--linha);background:transparent;position:relative;z-index:2}
+header{border-bottom:1px solid var(--linha-clara);background:transparent;position:relative;z-index:2}
 .nav{display:flex;align-items:center;justify-content:space-between;height:66px;max-width:720px;margin:0 auto;padding:0 6vw}
-.marca{font-family:var(--serif);font-size:1.15rem;letter-spacing:.02em;text-decoration:none;color:var(--azul)}
-.marca span{color:var(--grafite);font-style:italic}
-.fone{display:inline-flex;align-items:center;min-height:44px;padding:0 .2rem;color:#6B6457;text-decoration:none;font-size:.78rem;letter-spacing:.08em;font-weight:500}
-.fone:hover{color:var(--bronze)}
+.marca{font-family:var(--serif);font-size:1.15rem;letter-spacing:.02em;text-decoration:none;color:var(--azul-claro)}
+.marca span{color:var(--porcelana);font-style:italic}
+.fone{display:inline-flex;align-items:center;min-height:44px;padding:0 .2rem;color:var(--texto-apagado);text-decoration:none;font-size:.78rem;letter-spacing:.08em;font-weight:500}
+.fone:hover{color:var(--bronze-claro)}
 
 /* veios decorativos */
 .veios{position:absolute;top:0;left:0;width:100%;height:340px;pointer-events:none;z-index:0;overflow:hidden}
-.veios path{fill:none;stroke:var(--bronze);stroke-width:1;opacity:.16}
+.veios path{fill:none;stroke:var(--bronze-claro);stroke-width:1;opacity:.18}
 
 /* ---------- wizard ---------- */
-main{flex:1;position:relative;z-index:1;padding:2.6rem 0 4rem}
-.cab{margin-bottom:2.2rem}
-.cab h1{font-size:clamp(1.9rem,6.4vw,2.9rem);max-width:16ch}
-.cab .sub{margin-top:1rem;color:#4A453C;font-size:.98rem;max-width:52ch}
+main{flex:1;position:relative;z-index:1;padding:2.4rem 0 4rem}
+.cab{margin-bottom:2rem}
+.cab h1{font-size:clamp(1.9rem,6.4vw,2.9rem)}
+.cab .sub{margin-top:.9rem;color:var(--texto-suave);font-size:.98rem;max-width:44ch}
 
 .progresso{display:flex;align-items:center;gap:1rem;margin-bottom:1.6rem}
-.progresso .label{color:var(--bronze-texto);font-size:.68rem}
-.barra{flex:1;height:2px;background:var(--linha);position:relative}
-.barra i{position:absolute;left:0;top:0;bottom:0;background:var(--bronze);transition:width .4s cubic-bezier(.2,.6,.2,1)}
+.progresso .label{color:var(--bronze-claro);font-size:.68rem}
+.barra{flex:1;height:2px;background:var(--linha-clara);position:relative}
+.barra i{position:absolute;left:0;top:0;bottom:0;background:var(--bronze-claro);transition:width .4s cubic-bezier(.2,.6,.2,1)}
 
 .etapa{display:none}
 .etapa.ativa{display:block;animation:entrar .38s cubic-bezier(.2,.6,.2,1)}
@@ -122,107 +123,88 @@ main{flex:1;position:relative;z-index:1;padding:2.6rem 0 4rem}
 
 .etapa h2{font-size:clamp(1.45rem,4.6vw,2.1rem);margin-bottom:.4rem}
 .etapa h2:focus{outline:none}
-.etapa .dica{color:#6B6457;font-size:.9rem;margin-bottom:1.4rem}
+.etapa .dica{color:var(--texto-apagado);font-size:.9rem;margin-bottom:1.4rem}
+.etapa h2:last-of-type{margin-bottom:1.4rem}
 
-.opcoes{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.opcoes{list-style:none;display:flex;flex-direction:column;gap:.65rem;margin-top:1.4rem}
 .op{
   display:flex;align-items:baseline;gap:1rem;width:100%;text-align:left;
-  background:#fff;border:1px solid var(--linha);cursor:pointer;
+  background:var(--grafite-2);border:1px solid var(--linha-clara);cursor:pointer;
   padding:1.02rem 1.15rem;font-family:var(--sans);font-size:1rem;font-weight:500;
-  color:var(--grafite);transition:border-color .25s,padding-left .25s;
+  color:var(--porcelana);transition:border-color .25s,padding-left .25s;
   -webkit-tap-highlight-color:transparent;
 }
-.op:hover{border-color:var(--bronze);padding-left:1.4rem}
-.op .n{font-family:var(--serif);font-style:italic;color:var(--bronze);font-size:.9rem;min-width:1.5rem}
+.op:hover{border-color:var(--bronze-claro);padding-left:1.4rem}
 .op .seta{margin-left:auto;color:var(--bronze-claro);font-family:var(--serif);opacity:0;transition:opacity .25s}
 .op:hover .seta{opacity:1}
-.op.sel{border-color:var(--azul);box-shadow:inset 0 0 0 1px var(--azul)}
-.op.sel .seta{opacity:1;color:var(--azul)}
+.op.sel{border-color:var(--azul-claro);box-shadow:inset 0 0 0 1px var(--azul-claro)}
+.op.sel .seta{opacity:1;color:var(--azul-claro)}
+.op.destaque{font-weight:600}
+.op,.btn-zap,.btn-voltar,.tel-toggle{touch-action:manipulation}
 
 /* chips (cidades) */
-.chips{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;margin-top:1.4rem}
 .chips .op{width:auto;padding:.78rem 1.3rem;border-radius:99px;align-items:center;gap:.5rem}
 .chips .op:hover{padding-left:1.3rem}
-.chips .op .n{display:none}
 
 .campo-outra{margin-top:1.1rem;display:none}
 .campo-outra.aberto{display:block;animation:entrar .3s}
 
 /* inputs */
 input[type=text],input[type=tel]{
-  width:100%;font-family:var(--sans);font-size:1.05rem;color:var(--grafite);
-  background:#fff;border:1px solid var(--linha);padding:1rem 1.15rem;
+  width:100%;font-family:var(--sans);font-size:1.05rem;color:var(--porcelana);
+  background:var(--grafite-2);border:1px solid var(--linha-clara);padding:1rem 1.15rem;
   transition:border-color .25s;border-radius:0;-webkit-appearance:none;appearance:none;
 }
-input:focus{outline:none;border-color:var(--azul)}
-input::placeholder{color:#6B6457;opacity:1}
-.erro{color:#B0563C;font-size:.85rem;margin-top:.5rem}
-.op,.btn-zap,.btn-voltar,.tel-toggle{touch-action:manipulation}
+input:focus{outline:none;border-color:var(--azul-claro)}
+input::placeholder{color:var(--texto-apagado);opacity:1}
+.erro{color:#E39B7B;font-size:.85rem;margin-top:.5rem}
 
 .acoes{display:flex;align-items:center;gap:1.4rem;margin-top:1.6rem;flex-wrap:wrap}
 .btn-zap{
   display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
-  background:var(--grafite);color:var(--porcelana);text-decoration:none;
+  background:var(--porcelana);color:var(--grafite);text-decoration:none;
   font-size:.84rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
-  padding:1rem 2rem;border-radius:99px;border:1px solid var(--grafite);
+  padding:1rem 2rem;border-radius:99px;border:1px solid var(--porcelana);
   cursor:pointer;font-family:var(--sans);
   transition:background .3s,color .3s;
 }
-.btn-zap:hover{background:transparent;color:var(--grafite)}
+.btn-zap:hover{background:transparent;color:var(--porcelana)}
 .btn-zap svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
-.btn-zap:disabled{opacity:.45;cursor:not-allowed}
+.btn-zap.grande{padding:1.15rem 2.4rem;font-size:.9rem}
 .btn-voltar{
   background:none;border:none;cursor:pointer;font-family:var(--sans);
-  color:#6B6457;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--texto-apagado);font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
   min-height:44px;padding:.6rem .4rem;border-bottom:1px solid transparent;transition:color .3s,border-color .3s;
 }
-.btn-voltar:hover{color:var(--bronze);border-color:var(--bronze)}
+.btn-voltar:hover{color:var(--bronze-claro);border-color:var(--bronze-claro)}
 
-.escape{margin-top:2.6rem;padding-top:1.4rem;border-top:1px solid var(--linha)}
-.escape a{display:inline-block;color:#6B6457;font-size:.85rem;padding:.7rem 0;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--linha);transition:color .3s,text-decoration-color .3s}
-.escape a:hover{color:var(--bronze);text-decoration-color:var(--bronze)}
+.escape{margin-top:2.6rem;padding-top:1.4rem;border-top:1px solid var(--linha-clara)}
+.escape a{display:inline-block;color:var(--texto-apagado);font-size:.85rem;padding:.7rem 0;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--linha-clara);transition:color .3s,text-decoration-color .3s}
+.escape a:hover{color:var(--bronze-claro);text-decoration-color:var(--bronze-claro)}
+
+/* prova social discreta */
+.prova-mini{margin-top:1.3rem;font-size:.85rem;color:var(--texto-apagado)}
+.prova-mini .estrelas{color:var(--bronze-claro);letter-spacing:.12em;margin-right:.5rem}
 
 /* whatsapp opcional colapsado */
 .tel-toggle{
   background:none;border:none;cursor:pointer;font-family:var(--sans);
-  color:var(--azul);font-size:.86rem;font-weight:500;
+  color:var(--azul-claro);font-size:.86rem;font-weight:500;
   min-height:44px;padding:.55rem .2rem;text-align:left;
   text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--azul-claro);
   transition:color .3s;
 }
-.tel-toggle:hover{color:var(--azul-escuro)}
+.tel-toggle:hover{color:var(--porcelana)}
 .tel-campo{display:none;margin-top:1rem}
 .tel-campo.aberto{display:block;animation:entrar .3s}
-.tel-campo .mini{font-size:.8rem;color:#6B6457;margin-bottom:.5rem}
+.tel-campo .mini{font-size:.8rem;color:var(--texto-apagado);margin-bottom:.5rem}
 
-/* ---------- tela final ---------- */
-.final h2{font-size:clamp(1.6rem,5vw,2.3rem);max-width:20ch}
-.final .sub{margin-top:.8rem;color:#4A453C;font-size:.95rem;max-width:48ch}
-.balao-wrap{margin:1.8rem 0 0}
-.balao-wrap .mini{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze-texto);margin-bottom:.7rem}
-.balao{
-  background:#E9F6DC;border:1px solid rgba(24,23,20,.1);
-  padding:1.1rem 1.25rem;max-width:34rem;position:relative;
-  font-size:.95rem;line-height:1.55;color:var(--grafite-2);
-  border-radius:2px 14px 14px 14px;white-space:pre-line;
-}
-.balao::before{
-  content:"";position:absolute;top:0;left:-8px;
-  border-style:solid;border-width:0 10px 12px 0;
-  border-color:transparent #E9F6DC transparent transparent;
-}
-.prova{display:flex;align-items:center;gap:.7rem;margin-top:1.7rem;flex-wrap:wrap}
-.prova .estrelas{color:var(--bronze);letter-spacing:.15em;font-size:.95rem}
-.prova span{font-size:.85rem;color:#4A453C}
-.final .acoes{margin-top:2rem}
-.btn-zap.grande{padding:1.15rem 2.4rem;font-size:.9rem}
-.final .nota{margin-top:1.3rem;font-size:.85rem;color:#6B6457;max-width:46ch}
-
-footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-index:1}
+footer{border-top:1px solid var(--linha-clara);padding:1.4rem 0;position:relative;z-index:1}
 .rodape{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;max-width:720px;margin:0 auto;padding:0 6vw}
-.rodape small{font-size:.75rem;color:#6B6457}
-.rodape a{color:#6B6457;text-decoration:none;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;transition:color .3s}
-.rodape a:hover{color:var(--bronze)}
+.rodape small{font-size:.75rem;color:var(--texto-apagado)}
+.rodape a{color:var(--texto-apagado);text-decoration:none;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;transition:color .3s}
+.rodape a:hover{color:var(--bronze-claro)}
 
 @media(max-width:560px){
   main{padding:2rem 0 3rem}
@@ -250,9 +232,9 @@ footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-in
   <div class="wrap">
 
     <div class="cab" id="cab">
-      <span class="label">Pré-orçamento · resposta pelo WhatsApp</span>
-      <h1 style="margin-top:1rem">Vamos falar do seu <em>projeto</em>?</h1>
-      <p class="sub">Quatro toques, o seu primeiro nome e pronto: você segue direto para o WhatsApp da Patricia — que já te recebe sabendo exatamente o que o seu projeto precisa. Menos de 30 segundos, sem cadastro.</p>
+      <span class="label">Pré-orçamento pelo WhatsApp</span>
+      <h1 style="margin-top:.9rem">Vamos falar do seu <em>projeto</em>?</h1>
+      <p class="sub">Quatro toques, sem cadastro. Seu pré-orçamento sai pronto no WhatsApp.</p>
     </div>
 
     <div class="progresso" id="progresso">
@@ -263,31 +245,30 @@ footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-in
     <!-- Etapa 1: ambiente -->
     <section class="etapa ativa" data-etapa="1">
       <h2>O que você quer transformar?</h2>
-      <p class="dica">Toque na opção — a gente cuida do resto.</p>
       <ul class="opcoes">
-        <li><button type="button" class="op" data-campo="ambiente" data-val="Cozinha — bancada ou ilha" data-msg="Cozinha (bancada/ilha)"><span class="n">i.</span>Cozinha — bancada ou ilha<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="ambiente" data-val="Lavabo ou banheiro" data-msg="Lavabo/banheiro"><span class="n">ii.</span>Lavabo ou banheiro<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="ambiente" data-val="Área gourmet" data-msg="Área gourmet"><span class="n">iii.</span>Área gourmet<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="ambiente" data-val="Escada" data-msg="Escada"><span class="n">iv.</span>Escada<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="ambiente" data-val="Painel ou lareira" data-msg="Painel/lareira"><span class="n">v.</span>Painel ou lareira<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="ambiente" data-val="Mais de um ambiente — projeto completo" data-msg="Mais de um ambiente (projeto completo)"><span class="n">vi.</span>Mais de um ambiente — projeto completo<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="ambiente" data-val="Outro projeto" data-msg="Outro projeto"><span class="n">vii.</span>Outro projeto<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="ambiente" data-val="Cozinha (bancada ou ilha)" data-msg="Cozinha (bancada/ilha)">Cozinha (bancada ou ilha)<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="ambiente" data-val="Lavabo ou banheiro" data-msg="Lavabo/banheiro">Lavabo ou banheiro<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="ambiente" data-val="Área gourmet" data-msg="Área gourmet">Área gourmet<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="ambiente" data-val="Escada" data-msg="Escada">Escada<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="ambiente" data-val="Painel ou lareira" data-msg="Painel/lareira">Painel ou lareira<span class="seta">→</span></button></li>
+        <li><button type="button" class="op destaque" data-campo="ambiente" data-val="Mais de um ambiente, projeto completo" data-msg="Mais de um ambiente (projeto completo)">Mais de um ambiente, projeto completo<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="ambiente" data-val="Outro projeto" data-msg="Outro projeto">Outro projeto<span class="seta">→</span></button></li>
       </ul>
       <div class="escape">
-        <a href="https://wa.me/5547991154111?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Oliveira%20Porcelanatos%20e%20gostaria%20de%20um%20or%C3%A7amento." id="escapeZap" rel="noopener">Prefere ir direto? Fale com a Patricia no WhatsApp →</a>
+        <a href="https://wa.me/5547991154111?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Oliveira%20Porcelanatos%20e%20gostaria%20de%20um%20or%C3%A7amento." id="escapeZap" rel="noopener">Prefere ir direto? Fale com a Oliveira no WhatsApp →</a>
       </div>
     </section>
 
     <!-- Etapa 2: momento da obra -->
     <section class="etapa" data-etapa="2">
       <h2>Em que momento está a obra ou reforma?</h2>
-      <p class="dica">Isso ajuda a Patricia a te responder com a prioridade certa.</p>
+      <p class="dica">Isso ajuda a Oliveira a responder com a prioridade certa.</p>
       <ul class="opcoes">
-        <li><button type="button" class="op" data-campo="momento" data-val="Em acabamento — preciso definir agora" data-msg="Em acabamento, preciso definir agora"><span class="n">i.</span>Em acabamento — preciso definir agora<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="momento" data-val="Obra em andamento" data-msg="Obra em andamento"><span class="n">ii.</span>Obra em andamento<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="momento" data-val="Projeto pronto — obra começa em breve" data-msg="Projeto pronto, obra começa em breve"><span class="n">iii.</span>Projeto pronto — obra começa em breve<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="momento" data-val="Ainda planejando" data-msg="Ainda planejando"><span class="n">iv.</span>Ainda planejando<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="momento" data-val="Por enquanto, só pesquisando ideias" data-msg="Por enquanto só pesquisando ideias"><span class="n">v.</span>Por enquanto, só pesquisando ideias<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="momento" data-val="Em acabamento, preciso definir agora" data-msg="Em acabamento, preciso definir agora">Em acabamento, preciso definir agora<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="momento" data-val="Obra em andamento" data-msg="Obra em andamento">Obra em andamento<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="momento" data-val="Projeto pronto, obra começa em breve" data-msg="Projeto pronto, obra começa em breve">Projeto pronto, obra começa em breve<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="momento" data-val="Ainda planejando" data-msg="Ainda planejando">Ainda planejando<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="momento" data-val="Por enquanto, só pesquisando ideias" data-msg="Por enquanto só pesquisando ideias">Por enquanto, só pesquisando ideias<span class="seta">→</span></button></li>
       </ul>
       <div class="acoes"><button type="button" class="btn-voltar">← Voltar</button></div>
     </section>
@@ -295,12 +276,12 @@ footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-in
     <!-- Etapa 3: situação do projeto -->
     <section class="etapa" data-etapa="3">
       <h2>Como está o projeto desse ambiente?</h2>
-      <p class="dica">Assim a Patricia já sabe o próximo passo: projeto, medidas ou visita.</p>
+      <p class="dica">Assim já sabemos o próximo passo: projeto, medidas ou visita.</p>
       <ul class="opcoes">
-        <li><button type="button" class="op" data-campo="projeto" data-val="Tenho projeto de arquiteto(a)" data-msg="tenho projeto de arquiteto(a)" data-perfil="com-projeto"><span class="n">i.</span>Tenho projeto de arquiteto(a)<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="projeto" data-val="Tenho medidas ou um rascunho" data-msg="tenho medidas/rascunho" data-perfil="sem-projeto"><span class="n">ii.</span>Tenho medidas ou um rascunho<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="projeto" data-val="Ainda não tenho medidas" data-msg="ainda sem medidas" data-perfil="sem-projeto"><span class="n">iii.</span>Ainda não tenho medidas<span class="seta">→</span></button></li>
-        <li><button type="button" class="op" data-campo="projeto" data-val="Sou arquiteto(a) ou designer — especificando para um cliente" data-msg="sou arquiteto(a)/designer, especificando para cliente" data-perfil="b2b"><span class="n">iv.</span>Sou arquiteto(a) ou designer — especificando para um cliente<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="projeto" data-val="Tenho projeto de arquiteto(a)" data-msg="tenho projeto de arquiteto(a)" data-perfil="com-projeto">Tenho projeto de arquiteto(a)<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="projeto" data-val="Tenho medidas ou um rascunho" data-msg="tenho medidas/rascunho" data-perfil="sem-projeto">Tenho medidas ou um rascunho<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="projeto" data-val="Ainda não tenho medidas" data-msg="ainda sem medidas" data-perfil="sem-projeto">Ainda não tenho medidas<span class="seta">→</span></button></li>
+        <li><button type="button" class="op" data-campo="projeto" data-val="Sou arquiteto(a) ou designer, especificando para um cliente" data-msg="sou arquiteto(a)/designer, especificando para cliente" data-perfil="b2b">Sou arquiteto(a) ou designer, especificando para um cliente<span class="seta">→</span></button></li>
       </ul>
       <div class="acoes"><button type="button" class="btn-voltar">← Voltar</button></div>
     </section>
@@ -326,47 +307,26 @@ footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-in
       <div class="acoes"><button type="button" class="btn-voltar">← Voltar</button></div>
     </section>
 
-    <!-- Etapa 5: nome (+ whatsapp opcional) -->
+    <!-- Etapa 5: nome + WhatsApp -->
     <section class="etapa" data-etapa="5">
       <h2>Como podemos te chamar?</h2>
       <p class="dica">Só o primeiro nome. Sem cadastro, sem e-mail.</p>
-      <input type="text" id="inpNome" placeholder="Seu nome" aria-label="Seu primeiro nome" autocomplete="name" autocapitalize="words" enterkeyhint="done" maxlength="60">
+      <input type="text" id="inpNome" placeholder="Seu nome" aria-label="Seu primeiro nome" autocomplete="name" autocapitalize="words" enterkeyhint="send" maxlength="60">
       <p class="erro" id="erroNome" role="alert" hidden>Só precisamos do seu primeiro nome para montar a mensagem.</p>
       <div class="acoes">
-        <button type="button" class="btn-zap" id="btnNomeOk">Continuar</button>
+        <a class="btn-zap grande" id="ctaZap" href="https://wa.me/5547991154111?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Oliveira%20Porcelanatos%20e%20gostaria%20de%20um%20or%C3%A7amento." rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0012.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 01-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 012.41 5.83c0 4.54-3.7 8.24-8.25 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42-.14 0-.31-.02-.48-.02s-.43.06-.66.31c-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+          Falar com a Oliveira no WhatsApp
+        </a>
         <button type="button" class="btn-voltar">← Voltar</button>
       </div>
+      <p class="prova-mini"><span class="estrelas">★★★★★</span><strong>5,0</strong> · 94 avaliações no Google</p>
       <div style="margin-top:1.4rem">
-        <button type="button" class="tel-toggle" id="telToggle">Prefere que a Patricia te retorne? Deixe seu WhatsApp (opcional)</button>
+        <button type="button" class="tel-toggle" id="telToggle">Prefere que a Oliveira te retorne? Deixe seu WhatsApp (opcional)</button>
         <div class="tel-campo" id="telCampo">
           <p class="mini">Usamos só para retornar sobre este orçamento. Nada de lista de transmissão.</p>
           <input type="tel" id="inpTel" placeholder="(47) 99999-9999" aria-label="Seu WhatsApp com DDD (opcional)" inputmode="tel" autocomplete="tel" enterkeyhint="done" maxlength="19">
         </div>
-      </div>
-    </section>
-
-    <!-- Tela final -->
-    <section class="etapa final" data-etapa="6">
-      <span class="label" style="color:var(--bronze-texto)">Tudo pronto</span>
-      <h2 id="finalTitulo" style="margin-top:.9rem">Sua mensagem já está montada.</h2>
-      <p class="sub">A Patricia te recebe sabendo exatamente o que o seu projeto precisa. Confira — você ainda pode editar no WhatsApp antes de enviar.</p>
-      <div class="balao-wrap">
-        <p class="mini">Sua mensagem</p>
-        <div class="balao" id="balaoPreview"></div>
-      </div>
-      <div class="prova">
-        <span class="estrelas">★★★★★</span>
-        <span><strong>5,0</strong> — 94 avaliações de clientes no Google</span>
-      </div>
-      <div class="acoes">
-        <a class="btn-zap grande" id="ctaZap" href="https://wa.me/5547991154111?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Oliveira%20Porcelanatos%20e%20gostaria%20de%20um%20or%C3%A7amento." rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0012.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 01-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 012.41 5.83c0 4.54-3.7 8.24-8.25 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42-.14 0-.31-.02-.48-.02s-.43.06-.66.31c-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
-          Chamar a Patricia no WhatsApp
-        </a>
-      </div>
-      <p class="nota">A Patricia responde em horário comercial. Se tiver fotos ou medidas do espaço, é só mandar na própria conversa.</p>
-      <div class="acoes" style="margin-top:1.2rem">
-        <button type="button" class="btn-voltar">← Revisar respostas</button>
       </div>
     </section>
 
@@ -375,7 +335,7 @@ footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-in
 
 <footer>
   <div class="rodape">
-    <small>© 2026 Oliveira Porcelanatos — Joinville/SC</small>
+    <small>© 2026 Oliveira Porcelanatos, Joinville/SC</small>
     <a href="https://www.instagram.com/oliveiraporcelanatos/" target="_blank" rel="noopener">Instagram</a>
   </div>
 </footer>
@@ -387,7 +347,7 @@ footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-in
   /* ============ config ============ */
   var LEAD_ENDPOINT = ''; // URL do Web App (Google Apps Script). Vazio = captura desativada, fluxo segue normal.
   var WA_NUMBER = '5547991154111';
-  var TOTAL_ETAPAS = 5; // 4 escolhas + nome (tela final não conta)
+  var TOTAL_ETAPAS = 5;
 
   /* ============ estado ============ */
   var state = {
@@ -429,6 +389,7 @@ footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-in
     }
   }catch(e){}
   if(!state.eventId) state.eventId = uuid();
+  if(state.step > TOTAL_ETAPAS) state.step = TOTAL_ETAPAS;
 
   function salvar(){
     try{ sessionStorage.setItem('op_state', JSON.stringify(state)); }catch(e){}
@@ -480,21 +441,35 @@ footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-in
     }catch(e){}
   }
 
+  /* ============ telefone ============ */
+  function formatTel(d){
+    if(d.length > 2 && d.length <= 6) return '(' + d.slice(0,2) + ') ' + d.slice(2);
+    if(d.length > 6 && d.length <= 10) return '(' + d.slice(0,2) + ') ' + d.slice(2,6) + '-' + d.slice(6);
+    if(d.length === 11) return '(' + d.slice(0,2) + ') ' + d.slice(2,7) + '-' + d.slice(7);
+    return d;
+  }
+
   /* ============ mensagem do whatsapp ============ */
   function textoWa(){
+    var abertura = 'Olá! Aqui é ' + (state.nome || 'cliente do site') +
+      '. Acabei de montar meu pré-orçamento no site' + (REF ? ' (cód. ' + REF + ')' : '') + ':';
     var linhas = [
-      'Olá, Patricia! Aqui é ' + (state.nome || 'cliente do site') + '. Acabei de montar meu pré-orçamento no site:',
+      abertura,
       '• Ambiente: ' + state.ambienteMsg,
       '• Momento: ' + state.momentoMsg,
       '• Projeto: ' + state.projetoMsg,
-      '• Cidade: ' + state.cidadeMsg,
-      'Se ajudar, já envio fotos ou medidas por aqui.' + (REF ? ' (cód. ' + REF + ')' : '')
+      '• Cidade: ' + state.cidadeMsg
     ];
-    if(state.whatsapp) linhas.splice(5, 0, '• WhatsApp p/ retorno: ' + formatTel(state.whatsapp));
+    if(state.whatsapp) linhas.push('• WhatsApp p/ retorno: ' + formatTel(state.whatsapp));
     return linhas.join('\n');
   }
   function linkWa(texto){
     return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(texto);
+  }
+
+  var ctaZap = document.getElementById('ctaZap');
+  function syncCta(){
+    ctaZap.setAttribute('href', linkWa(textoWa()));
   }
 
   /* ============ navegação do wizard ============ */
@@ -511,28 +486,13 @@ footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-in
     etapas.forEach(function(sec){
       sec.classList.toggle('ativa', Number(sec.getAttribute('data-etapa')) === n);
     });
-    if(n <= TOTAL_ETAPAS){
-      progTxt.textContent = 'Etapa ' + n + ' de ' + TOTAL_ETAPAS;
-      progFill.style.width = (n / TOTAL_ETAPAS * 100) + '%';
-      document.getElementById('progresso').style.display = '';
-    } else {
-      document.getElementById('progresso').style.display = 'none';
-      montarFinal();
-    }
+    progTxt.textContent = 'Etapa ' + n + ' de ' + TOTAL_ETAPAS;
+    progFill.style.width = (n / TOTAL_ETAPAS * 100) + '%';
     cab.style.display = (n === 1) ? '' : 'none';
+    if(n === TOTAL_ETAPAS) syncCta();
     var h2ativa = document.querySelector('.etapa.ativa h2');
     if(h2ativa){ h2ativa.setAttribute('tabindex','-1'); h2ativa.focus({preventScroll:true}); }
     window.scrollTo({top:0, behavior:'smooth'});
-  }
-
-  function montarFinal(){
-    var t = textoWa();
-    document.getElementById('balaoPreview').textContent = t;
-    document.getElementById('ctaZap').setAttribute('href', linkWa(t));
-    var titulo = document.getElementById('finalTitulo');
-    titulo.textContent = state.nome
-      ? ('Tudo pronto, ' + state.nome + '. Sua mensagem já está montada.')
-      : 'Sua mensagem já está montada.';
   }
 
   /* seleção com auto-avanço (delay anti-toque acidental) */
@@ -609,7 +569,7 @@ footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-in
   function confirmarOutra(){
     var v = inpOutra.value.trim();
     if(!v){
-      inpOutra.style.borderColor = '#B0563C';
+      inpOutra.style.borderColor = '#E39B7B';
       inpOutra.setAttribute('aria-invalid','true');
       erroOutra.hidden = false;
       inpOutra.focus();
@@ -655,12 +615,6 @@ footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-in
   });
 
   /* máscara BR simples no telefone (celular 11, fixo 10, paste com +55) */
-  function formatTel(d){
-    if(d.length > 2 && d.length <= 6) return '(' + d.slice(0,2) + ') ' + d.slice(2);
-    if(d.length > 6 && d.length <= 10) return '(' + d.slice(0,2) + ') ' + d.slice(2,6) + '-' + d.slice(6);
-    if(d.length === 11) return '(' + d.slice(0,2) + ') ' + d.slice(2,7) + '-' + d.slice(7);
-    return d;
-  }
   var inpTel = document.getElementById('inpTel');
   inpTel.addEventListener('input', function(){
     var d = inpTel.value.replace(/\D/g,'');
@@ -668,12 +622,13 @@ footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-in
     d = d.slice(0,11);
     inpTel.value = formatTel(d);
     state.whatsapp = d; salvar();
+    syncCta();
   });
   inpTel.addEventListener('blur', function(){
     if(state.whatsapp) beacon('telefone_informado');
   });
 
-  /* nome → lead */
+  /* nome */
   var inpNome = document.getElementById('inpNome');
   var erroNome = document.getElementById('erroNome');
   inpNome.addEventListener('input', function(){
@@ -681,17 +636,28 @@ footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-in
     inpNome.style.borderColor = '';
     inpNome.removeAttribute('aria-invalid');
     erroNome.hidden = true;
+    syncCta();
   });
-  function confirmarNome(){
+  inpNome.addEventListener('blur', function(){
+    if(state.nome.length >= 2) beacon('lead_nome');
+  });
+  inpNome.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); ctaZap.click(); }
+  });
+
+  /* CTA final: valida o nome; tracking fire-and-forget, navegação nunca espera callback */
+  ctaZap.addEventListener('click', function(e){
     var v = inpNome.value.trim();
     if(v.length < 2){
-      inpNome.style.borderColor = '#B0563C';
+      e.preventDefault();
+      inpNome.style.borderColor = '#E39B7B';
       inpNome.setAttribute('aria-invalid','true');
       erroNome.hidden = false;
       inpNome.focus();
       return;
     }
     state.nome = v; salvar();
+    syncCta();
     fireOnce('lead', function(){
       pixel('track', 'Lead', {
         content_name:'orcamento', content_category: state.ambiente,
@@ -703,16 +669,6 @@ footer{border-top:1px solid var(--linha);padding:1.4rem 0;position:relative;z-in
         cidade: state.cidade, perfil: state.perfil, ref: REF
       });
     });
-    beacon('lead_nome');
-    mostrar(6);
-  }
-  document.getElementById('btnNomeOk').addEventListener('click', confirmarNome);
-  inpNome.addEventListener('keydown', function(e){
-    if(e.key === 'Enter'){ e.preventDefault(); confirmarNome(); }
-  });
-
-  /* CTA final: tracking fire-and-forget, navegação nunca espera callback */
-  document.getElementById('ctaZap').addEventListener('click', function(){
     pixel('track', 'Contact', {
       content_name:'orcamento', content_category: state.ambiente,
       momento_obra: state.momento, cidade: state.cidade,
