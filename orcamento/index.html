@@ -434,7 +434,7 @@ footer{border-top:1px solid var(--linha-clara);padding:1.4rem 0;position:relativ
   /* ============ mensagem do whatsapp ============ */
   function textoWa(){
     var abertura = 'Olá! Meu nome é *' + (state.nome || 'cliente do site') +
-      '*. Acabei de montar meu pré-orçamento no site' + (REF ? ' (cód. ' + REF + ')' : '') + ':';
+      '*. Acabei de montar meu pré-orçamento no site:';
     var linhas = [
       abertura,
       '',
@@ -639,7 +639,7 @@ footer{border-top:1px solid var(--linha-clara);padding:1.4rem 0;position:relativ
 
   /* link de escape (etapa 1) */
   var escape_ = document.getElementById('escapeZap');
-  escape_.setAttribute('href', linkWa('Olá! Vim pelo site da Oliveira Porcelanatos e gostaria de um orçamento.' + (REF ? ' (cód. ' + REF + ')' : '')));
+  escape_.setAttribute('href', linkWa('Olá! Vim pelo site da Oliveira Porcelanatos e gostaria de um orçamento.'));
   escape_.addEventListener('click', function(){
     pixel('track', 'Contact', { content_name:'orcamento_pulo', ref: REF });
     ga('whatsapp_click', { event_category:'lead', event_label:'orcamento', origem:'pulo_form', ref: REF });
