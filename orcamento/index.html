@@ -406,6 +406,12 @@ footer{border-top:1px solid var(--linha-clara);padding:1.4rem 0;position:relativ
     ga('form_progress', p);
   }
 
+  /* le cookie por nome (para _fbp/_fbc do Pixel -> melhora match da Conversions API) */
+  function getCookie(n){
+    try{ var m = document.cookie.match('(^|;)\\s*' + n + '\\s*=\\s*([^;]+)'); return m ? m.pop() : ''; }
+    catch(e){ return ''; }
+  }
+
   function beacon(stage){
     if(!LEAD_ENDPOINT) return;
     try{
@@ -417,6 +423,7 @@ footer{border-top:1px solid var(--linha-clara);padding:1.4rem 0;position:relativ
         cidade: state.cidade, nome: state.nome, whatsapp: state.whatsapp,
         ref: REF, utm_source: UTM.source, utm_medium: UTM.medium, utm_campaign: UTM.campaign,
         event_id: state.eventId,
+        fbp: getCookie('_fbp'), fbc: getCookie('_fbc'),
         page: location.href,
         ua: navigator.userAgent
       });
